@@ -6,7 +6,14 @@ class UserController
 {
     public function loginController()
     {
-        if(isset($_POST["username"]) && isset($_POST["password"]))
+        if (isset($_SESSION)) {
+            echo '<script type="text/javascript">
+            function redireccionar(){
+            window.location.replace("http://localhost/webprogrammingfcefy2020/Golive/inicio"); 
+            } 
+            redireccionar();
+            </script>';
+        }else if(isset($_POST["username"]) && isset($_POST["password"]))
         {   
             if( preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["username"]) &&
                 preg_match('/^(?=.*[A-Z])(?=.*[!@#$&*._-])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,15}$/', $_POST["password"]))
@@ -16,7 +23,7 @@ class UserController
                                         "password"=>$contraseña);
 
                 $resultado = UserModel::loginModel($datosController);
-
+                
                 if($resultado == '')
                 {
                     echo '<div class="alert alert-success">Inicio sesion correctamente!</div>';

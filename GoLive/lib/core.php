@@ -2,7 +2,8 @@
 define("VIEWS_ROUTE", ROOT."views/");
 define("CONTROLLERS_ROUTE", ROOT."controllers/");
 define("ASSETS_ROUTE", ROOT."assets/");
-define("ASSETS_ADMIN", "</div>/assets/adminapp/");
+define("LIB_ROUTE", ROOT."lib/");
+
 
 require 'Router.php';
 require 'Route.php';
@@ -12,3 +13,4 @@ include CONTROLLERS_ROUTE."/template.php";
 include 'models/User.php';
 include_once "models/conexion.php";
 
+session_start();

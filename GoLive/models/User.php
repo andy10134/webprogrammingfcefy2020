@@ -17,7 +17,6 @@ class UserModel
             if($resultado["password"] == $datosController["password"])
             {
                 
-            session_start();
             $_SESSION["validar"] = true;
             $_SESSION["id"] = $resultado["id"];
             $_SESSION["roleId"] = $resultado["roleId"];
