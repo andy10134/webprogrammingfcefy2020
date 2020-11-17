@@ -42,6 +42,11 @@
 
 	$router->add('/webprogrammingfcefy2020/Golive/ingresar', 'UserController::loginController');
 
+	$router->add('/webprogrammingfcefy2020/Golive/salir', function () {
+		session_destroy();
+		return '';
+	});
+
 	$router->add('/webprogrammingfcefy2020/Golive/registrarse', 'UserController::signupController');
 
 	//$router->add('/webprogrammingfcefy2020/Golive/inicio', 'UserController::signupController');

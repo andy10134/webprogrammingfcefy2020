@@ -6,7 +6,7 @@ class UserController
 {
     public function loginController()
     {
-        if (isset($_SESSION)) {
+        if (!empty($_SESSION)) {
             echo '<script type="text/javascript">
             function redireccionar(){
             window.location.replace("http://localhost/webprogrammingfcefy2020/Golive/inicio"); 
