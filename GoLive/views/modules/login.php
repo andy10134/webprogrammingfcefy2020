@@ -46,7 +46,7 @@
   
 
   <section class="container col-lg-10 col-xs-11 row d-flex p-0">
-    <div class="info col-lg-4 col-md-12 text-center d-flex flex-column justify-content-center ">
+    <div class="info col-lg-4 col-md-12 text-center d-flex flex-column justify-content-center " style="min-height: 85vh;">
       <img src="assets/app/img/34839d0e5658c919930ed9fd3c8b1437.png" class="imgform">
       <p class="h3 pt-1 pb-3">
         ¿Sos nuevo por acá?
@@ -54,7 +54,7 @@
       <p class="lead pb-3">
         Comenza a manejar tus actividades de forma smart. ;)
       </p>
-      <a class="boton">
+      <a class="boton" href="registrarse">
         Registrarse
       </a>
     </div>
@@ -68,7 +68,7 @@
        <form METHOD="POST" action="">
                 <div class="form-group row d-flex flex-column align-items-center">
               
-                    <input class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 " type="email" name="email" placeholder="E-mail">
+                    <input class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 " type="username" name="username" placeholder="Nombre de usuario">
                     <input class="form-control  mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 " type="password" name="password" placeholder="Contraseña">
  
                     

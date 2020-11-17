@@ -54,7 +54,7 @@
       <p class="lead pb-3">
         Si ese ese es el caso podés iniciar sesíon acá <br> <strong>;)</strong>
       </p>
-      <a class="boton">
+      <a class="boton" href="ingresar">
         Iniciar Sesion
       </a>
     </div>
