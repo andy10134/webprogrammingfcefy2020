@@ -49,6 +49,8 @@
 
 	$router->add('/webprogrammingfcefy2020/Golive/registrarse', 'UserController::signupController');
 
+	$router->add('/webprogrammingfcefy2020/Golive/perfil', 'UserController::profileController');
+
 	//$router->add('/webprogrammingfcefy2020/Golive/inicio', 'UserController::signupController');
 
 	$router->run();

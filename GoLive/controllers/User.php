@@ -97,6 +97,12 @@ class UserController
         return "";
     }
 
+    public function profileController()
+    {
+        include "views/modules/app/profile.php";
+        return '' ; 
+    }
+
     public function validateUsernameController($data)
     {
 
