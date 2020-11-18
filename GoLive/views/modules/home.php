@@ -22,7 +22,7 @@ include "nav.php";
             }else{
               $genero = 'Bienvenidx';
             }
-            echo '<h1>'.$genero.' '.$_SESSION["username"].'</h1>
+            echo '<h1>'.$genero.' '.$_SESSION["name"].' '.$_SESSION["lastName"].'</h1>
             <h2>Aquí comienza la administración smart ;)</h2>
             <div><a href="http://localhost/webprogrammingfcefy2020/Golive/registrarse" class="btn-get-started scrollto">A entrenar!
             </a></div>';

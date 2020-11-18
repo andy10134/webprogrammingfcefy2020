@@ -22,7 +22,8 @@
             echo'<a href="ingresar" class="get-started-btn scrollto">Iniciar Sesión</a>
              <a href="registrarse" class="get-started-btn scrollto">Registrarse</a>';  
           }else{
-            echo '<a href="salir" class="get-started-btn scrollto">Salir</a>';
+            echo '<a href="" class="get-started-btn scrollto">'.$_SESSION["username"].'</a>
+            <a href="salir" class="get-started-btn scrollto">Salir</a>';
           }
           ?>
           </div>
