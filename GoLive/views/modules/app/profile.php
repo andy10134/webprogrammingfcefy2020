@@ -1,5 +1,9 @@
+<?php
+include "views/modules/nav.php";
+?>
+
 <div class="container bootstrap snippets bootdey">
-<div class="row">
+<div class="row"  style="margin-top:90px;">
   <div class="profile-nav col-md-3">
       <div class="panel">
           <div class="user-heading round">
@@ -126,6 +130,10 @@
   </div>
 </div>
 </div>
+
+<?php
+  include "views/modules/footer.php";
+  ?>
 
 
 <style type="text/css">
