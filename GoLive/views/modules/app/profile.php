@@ -1,4 +1,3 @@
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container bootstrap snippets bootdey">
 <div class="row">
   <div class="profile-nav col-md-3">
@@ -45,33 +44,22 @@
           <div class="bio-graph-heading">
               Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ispum. Aliquam ac magna metus.
           </div>
-          <div class="panel-body bio-graph-info">
-              <h1>Bio Graph</h1>
+          <div class="panel-body bio-graph-info ">
+              <h1 >Información</h1>
               <div class="row">
-                  <div class="bio-row">
-                      <p><span>First Name </span>: Camila</p>
+                  <div class="bio-row col-lg-6 col-sm-12  w-100">
+                      <p><span>Nombre </span>: Camila</p>
                   </div>
-                  <div class="bio-row">
-                      <p><span>Last Name </span>: Smith</p>
+                  <div class="bio-row col-lg-6 col-sm-12 w-100">
+                      <p><span>Apellido </span>: smith</p>
                   </div>
-                  <div class="bio-row">
-                      <p><span>Country </span>: Australia</p>
+                  <div class="bio-row col-lg-6 col-sm-12 w-100">
+                      <p><span>Teléfono </span>: Australia</p>
                   </div>
-                  <div class="bio-row">
-                      <p><span>Birthday</span>: 13 July 1983</p>
+                  <div class="bio-row col-lg-6 col-sm-12 w-100">
+                      <p><span>Email</span>: 13 July 1983</p>
                   </div>
-                  <div class="bio-row">
-                      <p><span>Occupation </span>: UI Designer</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Email </span>: jsmith@flatlab.com</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Mobile </span>: (12) 03 4567890</p>
-                  </div>
-                  <div class="bio-row">
-                      <p><span>Phone </span>: 88 (02) 123456</p>
-                  </div>
+                  
               </div>
           </div>
       </div>
@@ -139,11 +127,12 @@
 </div>
 </div>
 
-<style>
-    body {
+
+<style type="text/css">
+  body {
     color: #797979;
     background: #f1f2f7;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
     font-size: 13px;
@@ -152,12 +141,23 @@
     -moz-font-smoothing: antialiased;
 }
 
+
+
+.panel{
+  margin-top: 2.5%;
+}
+
+.panel-body{
+  color: #070429;
+  margin-top: 3%;
+}
+
 .profile-nav, .profile-info{
     margin-top:30px;   
 }
 
 .profile-nav .user-heading {
-    background: #fbc02d;
+    background: #04d273;
     color: #fff;
     border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
@@ -212,7 +212,7 @@
 
 .profile-nav ul > li > a:hover, .profile-nav ul > li > a:focus, .profile-nav ul li.active  a {
     background: #f8f7f5 !important;
-    border-left: 5px solid #fbc02d;
+    border-left: 5px solid #04d273;
     color: #89817f !important;
 }
 
@@ -250,8 +250,14 @@
     color: #7a7a7a;
 }
 
+
+.bio-graph-info{
+  border: 1px solid #0b0050;
+  padding: 4%;
+}
+
 .bio-graph-heading {
-    background: #fbc02d;
+    background: #04d273;
     color: #fff;
     text-align: center;
     font-style: italic;
@@ -262,12 +268,13 @@
     font-weight: 300;
 }
 
-.bio-graph-info {
-    color: #89817e;
+.bio-graph-info p{
+    font-size: 1.6em;
 }
 
 .bio-graph-info h1 {
-    font-size: 22px;
+    color: #0b0050;
+    font-size: 28px;
     font-weight: 300;
     margin: 0 0 20px;
 }
