@@ -10,7 +10,7 @@ include "nav.php";
         <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h1>Administra tu institución con GOLIVE</h1>
           <h2>Aquí comienza la administración smart ;)</h2>
-          <div><a href="#about" class="btn-get-started scrollto">Empecemos!
+          <div><a href="http://localhost/webprogrammingfcefy2020/Golive/registrarse" class="btn-get-started scrollto">Empecemos!
           </a></div>
         </div>
         <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
@@ -309,7 +309,7 @@ include "nav.php";
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Frequently Asked Questions</h2>
+          <h2>Preguntas frecuentes</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
