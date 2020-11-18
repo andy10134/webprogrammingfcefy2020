@@ -8,10 +8,27 @@ include "nav.php";
     <div class="container-fluid" data-aos="fade-up">
       <div class="row justify-content-center">
         <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Administra tu institución con GOLIVE</h1>
-          <h2>Aquí comienza la administración smart ;)</h2>
-          <div><a href="http://localhost/webprogrammingfcefy2020/Golive/registrarse" class="btn-get-started scrollto">Empecemos!
-          </a></div>
+        <?php
+          if (!isset($_SESSION["id"])) {
+            echo'<h1>Administra tu institución con GOLIVE</h1>
+            <h2>Aquí comienza la administración smart ;)</h2>
+            <div><a href="http://localhost/webprogrammingfcefy2020/Golive/registrarse" class="btn-get-started scrollto">Empecemos!
+            </a></div>';  
+          }else{
+            if($_SESSION["genderId"] == 1){
+              $genero = 'Bienvenido';
+            }elseif($_SESSION["genderId"] == 2){
+              $genero = 'Bienvenida';
+            }else{
+              $genero = 'Bienvenidx';
+            }
+            echo '<h1>'.$genero.' '.$_SESSION["username"].'</h1>
+            <h2>Aquí comienza la administración smart ;)</h2>
+            <div><a href="http://localhost/webprogrammingfcefy2020/Golive/registrarse" class="btn-get-started scrollto">A entrenar!
+            </a></div>';
+          }
+          ?>
+          
         </div>
         <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
           <img src="assets/app/img/hero2.png" class="img-fluid animated" alt="">

@@ -44,6 +44,7 @@
 
 	$router->add('/webprogrammingfcefy2020/Golive/salir', function () {
 		session_destroy();
+		header("Location: http://localhost/webprogrammingfcefy2020/Golive/");
 		return '';
 	});
 

@@ -26,13 +26,15 @@ class UserController
                 
                 if($resultado == '')
                 {
-                    echo '<div class="alert alert-success">Inicio sesion correctamente!</div>';
+                    header("Location: http://localhost/webprogrammingfcefy2020/Golive/");
                 }
                 else
                 {
                     echo '<div class="alert alert-danger">Contraseña o usuario incorrecto.</div>';
+                    header("Location: http://localhost/webprogrammingfcefy2020/Golive/ingresar");
                 }
                 unset($_POST);
+                
             }
         }
         else
