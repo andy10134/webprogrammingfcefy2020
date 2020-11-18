@@ -4,17 +4,15 @@
 
       <div class="row justify-content-center">
         <div class="col-xl-9 d-flex align-items-center">
-            <h1 class="logo"><a href="">GO LIVE</a></h1>
+            <h1 class="logo"><a href="http://localhost/webprogrammingfcefy2020/Golive/">GO LIVE</a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
-            <a href="" class="logo mr-auto"><img src="assets/app/img/logo2.png" alt="" class="img-fluid"></a>
+            <a href="http://localhost/webprogrammingfcefy2020/Golive/" class="logo mr-auto"><img src="assets/app/img/logo2.png" alt="" class="img-fluid"></a>
 
           <nav class="nav-menu d-none d-lg-block">
             <ul>
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="#about">About</a></li>
+              <li class="active"><a href="#hero">Home</a></li>
               <li><a href="#services">Servicios</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#team">Team</a></li>
+              <li><a href="#price">Precios</a></li>
               <li><a href="#contact">Contacto</a></li>
 
             </ul>
