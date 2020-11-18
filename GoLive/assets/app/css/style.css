@@ -14,11 +14,11 @@ body {
 }
 
 a {
-  color: #5846f9;
+  color: #10bc7c;
 }
 
 a:hover {
-  color: #8577fb;
+  color: #17cf64;
   text-decoration: none;
 }
 
@@ -45,13 +45,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #5846f9;
+  background:#0a0b53;;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #7b27d8;
+  background: #17cf64;
   color: #fff;
 }
 
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #5846f9;
+  border: 6px solid #17cf64;
   border-top-color: #e7e4fe;
   border-radius: 50%;
   width: 60px;
@@ -458,7 +458,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .btn-get-started:hover {
   background: #fff;
-  color: #5846f9;
+  color: #0a0f53;;
 }
 
 #hero .animated {
@@ -845,7 +845,7 @@ section {
 }
 
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-  color: #b1a9fc;
+  color: #3e688f;
   font-size: 26px;
 }
 
@@ -889,7 +889,7 @@ section {
 }
 
 .testimonials .owl-dot.active {
-  background-color: #5846f9 !important;
+  background-color: #17cf64 !important;
 }
 
 @media (max-width: 767px) {
@@ -1047,7 +1047,7 @@ section {
 
 .pricing h4 {
   font-size: 36px;
-  color: #5846f9;
+  color: #2c4964;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
   margin-bottom: 20px;
@@ -1097,7 +1097,7 @@ section {
 }
 
 .pricing .btn-buy {
-  background: linear-gradient(42deg, #5846f9 0%, #7b27d8 100%);
+  background: linear-gradient(42deg, #10bd7d 0%, #17cf64 100%);
   display: inline-block;
   padding: 10px 35px;
   border-radius: 4px;
@@ -1111,12 +1111,12 @@ section {
 }
 
 .pricing .btn-buy:hover {
-  background: linear-gradient(180deg, #5846f9 0%, #7b27d8 100%);
+  background: linear-gradient(180deg,#10bd7d 0%, #17cf64 100%);
 }
 
 .pricing .featured h3 {
   color: #fff;
-  background: #5846f9;
+  background: #112f68;
 }
 
 .pricing .advanced {
@@ -1128,7 +1128,7 @@ section {
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-  background: #5846f9;
+  background: #112f68;
   color: #fff;
 }
 
@@ -1136,7 +1136,7 @@ section {
 # Frequently Asked Questions
 --------------------------------------------------------------*/
 .faq {
-  background: linear-gradient(42deg, #5846f9 0%, #7b27d8 100%);
+  background: linear-gradient(90deg, rgba(11, 0, 80, 0.9) 0%, rgba(4, 210, 115, 0.9) 100%), url("../img/counts-bg.png");
 }
 
 .faq .section-title h2, .faq .section-title p {
@@ -1183,7 +1183,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
-  color: #8577fb;
+  color: #17cf64;
 }
 
 .faq .faq-list .icon-show, .faq .faq-list .icon-close {
@@ -1207,7 +1207,7 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #5846f9;
+  color: #17cf64;
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -1237,7 +1237,7 @@ section {
 
 .contact .info-box i {
   font-size: 32px;
-  color: #5846f9;
+  color: #17cf64;
   border-radius: 50%;
   padding: 8px;
 }

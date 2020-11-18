@@ -6,13 +6,13 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Techie</h3>
+            <h3>GOLIVE</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+            Av. José Ignacio de la Roza Este 101 <br>
+              San Juan, SJ 5400<br>
+              Argentina <br><br>
+              <strong>Phone:</strong> +54 264 4123456<br>
+              <strong>Email:</strong> info@golive.com<br>
             </p>
           </div>
 
@@ -36,14 +36,6 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
             </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
           </div>
 
         </div>
