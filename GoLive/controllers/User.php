@@ -9,7 +9,7 @@ class UserController
         if (!empty($_SESSION)) {
             echo '<script type="text/javascript">
             function redireccionar(){
-            window.location.replace("http://localhost/webprogrammingfcefy2020/Golive/inicio"); 
+            window.location.replace("http://localhost/webprogrammingfcefy2020/Golive/"); 
             } 
             redireccionar();
             </script>';
@@ -44,7 +44,14 @@ class UserController
 
     public function signupController()
     {
-        if( isset($_POST["firstName"]) &&
+        if (!empty($_SESSION)) {
+            echo '<script type="text/javascript">
+            function redireccionar(){
+            window.location.replace("http://localhost/webprogrammingfcefy2020/Golive/"); 
+            } 
+            redireccionar();
+            </script>';
+        }else if( isset($_POST["firstName"]) &&
             isset($_POST["lastName"]) &&
             isset($_POST["username"]) &&
             isset($_POST["email"]) &&
@@ -95,6 +102,12 @@ class UserController
         }
 
         return "";
+    }
+
+    public function profileController()
+    {
+        include "views/modules/app/profile.php";
+        return '' ; 
     }
 
     public function validateUsernameController($data)

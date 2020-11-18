@@ -17,8 +17,14 @@
 
             </ul>
           </nav><!-- .nav-menu -->
-          <a href="ingresar" class="get-started-btn scrollto">Iniciar Sesión</a>
-          <a href="registrarse" class="get-started-btn scrollto">Registrarse</a>
-        </div>
+          <?php
+          if (!isset($_SESSION["id"])) {
+            echo'<a href="ingresar" class="get-started-btn scrollto">Iniciar Sesión</a>
+             <a href="registrarse" class="get-started-btn scrollto">Registrarse</a>';  
+          }else{
+            echo '<a href="salir" class="get-started-btn scrollto">Salir</a>';
+          }
+          ?>
+          </div>
 	</div>
 </header><!-- End Header -->
