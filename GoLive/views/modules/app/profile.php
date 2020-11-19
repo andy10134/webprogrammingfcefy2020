@@ -67,7 +67,7 @@ include "views/modules/nav.php";
               </div>
           </div>
       </div>
-      <div>
+      <div class="schedules">
           <div class="row">
               <div class="col-md-6">
                   <div class="panel">
@@ -141,7 +141,7 @@ include "views/modules/nav.php";
 <style type="text/css">
   body {
     color: #797979;
-    background: #f1f2f7;
+    background: linear-gradient(45deg, rgba(11, 0, 80, 0.9) 0%, rgba(4, 210, 115, 0.9) 100%), url("../../../assets/app/img/hero-bg.jpg") center center no-repeat;
     font-family: 'Poppins', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -159,6 +159,7 @@ include "views/modules/nav.php";
 
 .panel-body{
   color: #070429;
+  background: #f9fbff;
   margin-top: 3%;
 }
 
@@ -206,6 +207,7 @@ include "views/modules/nav.php";
 .profile-nav ul > li {
     border-bottom: 1px solid #ebeae6;
     margin-top: 0;
+
     line-height: 30px;
 }
 
@@ -216,7 +218,7 @@ include "views/modules/nav.php";
 .profile-nav ul > li > a {
     border-radius: 0;
     -webkit-border-radius: 0;
-    color: #89817f;
+    color: #f9f8ff;
     border-left: 5px solid #fff;
 }
 
@@ -332,6 +334,10 @@ include "views/modules/nav.php";
 
 .bio-desk h4.purple {
     color: #caa3da;
+}
+
+.bio-desk{
+  color: #f9f8ff;
 }
 
 .file-pos {
@@ -533,4 +539,10 @@ ul.summary-list > li:last-child  {
 .activity-desk .album a:last-child{
     margin-right: 0px;
 }
+
+.schedules{
+  margin: 5% 0;
+
+}
+
 </style>
