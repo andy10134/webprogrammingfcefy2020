@@ -130,6 +130,8 @@ include "views/modules/nav.php";
   </div>
 </div>
 </div>
+<div id="preloader"></div>
+
 
 <?php
   include "views/modules/footer.php";

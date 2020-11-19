@@ -7,7 +7,7 @@ include "nav.php";
 
   <section class="container col-lg-10 col-xs-11 row d-flex p-0">
     <div class="info col-lg-4 col-md-12 text-center d-flex flex-column justify-content-center ">
-      <img src="assets/app/img/34839d0e5658c919930ed9fd3c8b1437.png" class="imgform">
+      <img src="assets/app/img/imgform.png" class="imgform">
       <p class="h3 pt-1 pb-3">
        ¿Ya tenes cuenta?
       </p>
@@ -186,7 +186,8 @@ h2.h2{
 .info{
   padding: 5% ;
   color : #f9f8ff;
-  background: #333a5aa3;
+  /*background: #333a5aa3;*/
+	background: linear-gradient(90deg, rgba(11,0,80,1) 0%, rgba(7,4,41,1) 100%);
   border-radius: 40px 0 0 40px;
 }
 
