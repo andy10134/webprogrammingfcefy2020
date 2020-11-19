@@ -154,15 +154,25 @@ class UserController
                 $tamano = $_FILES['archivo']['size'];
                 $temp = $_FILES['archivo']['tmp_name'];
 
-                if (!((strpos($tipo, "gif") || strpos($tipo, "jpeg") || strpos($tipo, "jpg") || strpos($tipo, "png")) && ($tamano < 2000000))) {
+                if (!((strpos($tipo, "gif") || strpos($tipo, "jpeg") || strpos($tipo, "jpg") || strpos($tipo, "png")) && ($tamano < 2000000)) && !empty($_SESSION)) {
                     echo '<div><b>Error. La extensión o el tamaño de los archivos no es correcta.<br/>
                 - Se permiten archivos .gif, .jpg, .png. y de 200 kb como máximo.</b></div>';
                 }
                 else {
-                    if (move_uploaded_file($temp, 'assets/uploads/'.$archivo)) {
-                        chmod('assets/uploads/'.$archivo, 0777);
+
+                    $image = fopen($_FILES['archivo']['tmp_name'], 'r');
+                    $binaryImage = fread($image, $tamano);
+
+                    $profileImage = array(
+                        ":profileImage" => $binaryImage,
+                        ":id" => $_SESSION["id"]
+                    );
+
+                    $response = UserModel::profileImageModel($profileImage);
+
+                    if (isset($response)) {
                         echo '<div><b>Se ha subido correctamente la imagen.</b></div>';
-                        echo '<p><img src="assets/uploads/'.$archivo.'"></p>';
+                       echo '<p><img src="data:image/jpeg;base64,'.base64_encode( $response["profileImage"]).'"></p>';
                     }
                     else {
                         echo '<div><b>Ocurrió algún error al subir el fichero. No pudo guardarse.</b></div>';

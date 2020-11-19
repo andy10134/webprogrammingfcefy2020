@@ -60,4 +60,14 @@ class UserModel
         $stmt -> execute($userData);
         return $stmt ->fetch();
     }
+
+    public function profileImageModel($profileImage)
+    {
+        $stmt = Conexion::conectar()->prepare("UPDATE users SET profileImage = :profileImage WHERE id = :id");
+        /*return*/ $stmt -> execute($profileImage);
+        $stmt = Conexion::conectar() -> prepare("SELECT profileImage FROM users WHERE id = :id");
+        $stmt->execute(array(':id' => $profileImage[':id']));
+        return $stmt ->fetch();
+    }
+
 }
