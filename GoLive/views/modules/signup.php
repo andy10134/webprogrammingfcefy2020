@@ -157,7 +157,9 @@ include "nav.php";
 
 body{
   width: 100%;
-  background: linear-gradient(90deg, rgba(4,178,115,1) 0%, rgba(5,126,93,1) 18%, rgba(6,77,72,1) 30%, rgba(7,4,41,1) 62%,rgba(7,4,41,1) 100%);
+  background: linear-gradient(45deg, rgba(11, 0, 80, 0.9) 0%, rgba(4, 210, 115, 0.9) 100%), url("../../../assets/app/img/hero-bg.jpg");
+  background-size: cover;
+  height: 100vh;
 }
 
 .container{
