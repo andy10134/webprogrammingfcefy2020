@@ -92,7 +92,7 @@ class UserController
                     ':password' => $password
                 );
                 $response = UserModel::signupModel($userData);
-                echo '<div class="alert alert-success">Inicio sesion correctamente!</div>';
+                header("Location: http://localhost/webprogrammingfcefy2020/Golive/");
             }
             else
             {
