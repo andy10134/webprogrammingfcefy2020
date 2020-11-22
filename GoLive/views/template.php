@@ -55,7 +55,9 @@
 
 	$router->add('/webprogrammingfcefy2020/Golive/imagen', 'UserController::profileImageController');
 
-	//$router->add('/webprogrammingfcefy2020/Golive/inicio', 'UserController::signupController');
+	$router->add('/webprogrammingfcefy2020/Golive/inicio', 'UserController::signupController');
+
+	$router->add('/webprogrammingfcefy2020/Golive/Alta-Institucion', 'UserController::Alta_Institution');
 
 	$router->run();
 

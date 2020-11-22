@@ -144,6 +144,16 @@ class UserController
             echo 0;
         }
     }
+
+    public function Alta_Institution(){
+        if (!isset($__POST)) {
+            include 'views/modules/Alta-institucion.php';
+        }
+
+
+
+        return '';
+    }
     
     public function profileImageController()
     {

@@ -22,7 +22,9 @@ include "views/modules/nav.php";
       </div>
       <div class="alta-gym">
         <p class="h5">¿Eres dueño de un gimnacio?</p>
-        <a href="" class="btn btn-outline-danger">Cuenta Institución</a>
+        <form action="http://localhost/webprogrammingfcefy2020/Golive/Alta-Institucion" method="POST">
+          <button class="btn btn-outline-danger">Cuenta Institución</button>
+        </form>
 
       </div>
   </div>
@@ -281,11 +283,11 @@ include "views/modules/nav.php";
 }
 
 
-.alta-gym a{
+.alta-gym button{
   background:#fff;
   margin-top: 10px;
 }
-.alta-gym a:hover{
+.alta-gym button:hover{
   border: 1px solid #fff;
 }
 

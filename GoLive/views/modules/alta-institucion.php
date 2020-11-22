@@ -9,27 +9,25 @@ include "nav.php";
     <div class="info col-lg-4 col-md-12 text-center d-flex flex-column justify-content-center ">
       <img src="assets/app/img/imgform.png" class="imgform">
       <p class="h3 pt-1 pb-3">
-       ¿Ya tenes cuenta?
+       Actualiza tu cuenta a Gimnacio ;)
       </p>
       <p class="lead pb-3">
-        Si ese ese es el caso podés iniciar sesíon acá <br> <strong>;)</strong>
+        Disfruta de los beneficios de trabajar con nosotros
       </p>
-      <a class="boton" href="ingresar">
-        Iniciar Sesion
-      </a>
+      
     </div>
 
     <div class="form col-lg-8 col-md-12 d-flex flex-column justify-content-center text-center">
 
     <h2 class="h2 p-0 m-0">
-        Registrarse
+       Actualiza tu cuenta
     </h2>
 
        <form METHOD="POST" action="">
                <div class="form-group row d-flex flex-column align-items-center">
 
-                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="firstName" placeholder="Nombre" id="name">
-                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="lastName" placeholder="Apellido" id="lastname">
+                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="firstName" placeholder="Tu direccion" id="name">
+                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="lastName" placeholder="Tu Teléfono" id="lastname">
                         <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="username" id="username" placeholder="Nombre de usuario">
                         
                         <!--<div class="invalid-feedback">
