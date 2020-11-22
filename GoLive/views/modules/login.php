@@ -43,6 +43,10 @@ include "nav.php";
 
   <div id="preloader"></div>
 
+  <?php 
+  include "footer.php";
+   ?>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
@@ -53,7 +57,7 @@ include "nav.php";
 @media (min-width: 993px) { 
 
   main{
-    height: 60vh;
+    height: fit-auto;
   }
 
 
@@ -113,6 +117,7 @@ include "nav.php";
     pading: 15% !important;
   }
 
+
   .form, .info{
     border-radius: 0 !important;
   }
@@ -122,7 +127,7 @@ include "nav.php";
     margin:0;
   }
 
- 
+
   }
 
 
@@ -130,7 +135,9 @@ include "nav.php";
 
 body{
   width: 100%;
-  background: linear-gradient(90deg, rgba(4,178,115,1) 0%, rgba(5,126,93,1) 18%, rgba(6,77,72,1) 30%, rgba(7,4,41,1) 62%,rgba(7,4,41,1) 100%);
+  background: linear-gradient(45deg, rgba(11, 0, 80, 0.9) 0%, rgba(4, 210, 115, 0.9) 100%), url("../../../assets/app/img/hero-bg.jpg");
+  background-size: cover;
+  height: 100vh;
 }
 
 .container{

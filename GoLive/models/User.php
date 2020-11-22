@@ -46,6 +46,19 @@ class UserModel
         $stmt = Conexion::conectar()->prepare(" INSERT INTO users (id, roleId, genderId, name, lastName, phoneNum, email, username, password) 
                                                 VALUES (null, :roleId, :genderId, :name, :lastName, :phoneNum, :email, :username,:password )");
         $stmt->execute($userData);
+
+        $stmt=Conexion::conectar()->prepare('SELECT id FROM users WHERE username = :username LIMIT 1');
+        $stmt->execute($userData[":username"]);
+        $resultado = $stmt->fetch();
+        $_SESSION["validar"] = true;
+        $_SESSION["id"] = $resultado;
+        $_SESSION["roleId"] = $userData[":roleId"];
+        $_SESSION["genderId"] = $userData[":genderId"];
+        $_SESSION["name"] = $userData[":name"];
+        $_SESSION["lastName"] = $userData[":lastName"];
+        $_SESSION["phoneNum"] = $userData[":phoneNum"];
+        $_SESSION["email"] = $userData[":email"];
+		$_SESSION["username"] = $userData[":username"];
     }
 
     public function validateUsernameModel($userData)
