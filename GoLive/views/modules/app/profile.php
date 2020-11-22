@@ -15,10 +15,15 @@ include "views/modules/nav.php";
           </div>
 
           <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a href="#"> <i class="fa fa-user"></i> Profile</a></li>
-              <li><a href="#"> <i class="fa fa-calendar"></i> Recent Activity <span class="label label-warning pull-right r-activity">9</span></a></li>
-              <li><a href="#"> <i class="fa fa-edit"></i> Edit profile</a></li>
+              <li class="active"><a href="#"> <i class="fa fa-user"></i> Perfil</a></li>
+              <li><a href="#"> <i class="fa fa-calendar"></i> Actividad Reciente </a></li>
+              <li><a href="#"> <i class="fa fa-edit"></i> Editar Perfil</a></li>
           </ul>
+      </div>
+      <div class="alta-gym">
+        <p class="h5">¿Eres dueño de un gimnacio?</p>
+        <a href="" class="btn btn-outline-danger">Cuenta Institución</a>
+
       </div>
   </div>
   <div class="profile-info col-md-9">
@@ -44,6 +49,8 @@ include "views/modules/nav.php";
               </ul>
           </footer>
       </div>
+      
+
       <div class="panel">
           <div class="bio-graph-heading">
               Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ispum. Aliquam ac magna metus.
@@ -67,6 +74,7 @@ include "views/modules/nav.php";
               </div>
           </div>
       </div>
+
       <div class="schedules">
           <div class="row">
               <div class="col-md-6">
@@ -158,7 +166,7 @@ include "views/modules/nav.php";
 }
 
 .panel-body{
-  color: #070429;
+  color: #d9534f;
   background: #f9fbff;
   margin-top: 3%;
 }
@@ -254,6 +262,7 @@ include "views/modules/nav.php";
 }
 
 .profile-info .panel-footer {
+    width: fit-content;
     background-color:#f8f7f5 ;
     border-top: 1px solid #e7ebee;
 }
@@ -262,6 +271,23 @@ include "views/modules/nav.php";
     color: #7a7a7a;
 }
 
+.alta-gym{
+  border: 1px solid #fff;
+  padding: 10% 5%;
+  text-align: center; 
+  background: #dc3545;
+  margin-top: 2vh;
+  color:#f9f8ff;
+}
+
+
+.alta-gym a{
+  background:#fff;
+  margin-top: 10px;
+}
+.alta-gym a:hover{
+  border: 1px solid #fff;
+}
 
 .bio-graph-info{
   border: 1px solid #0b0050;
