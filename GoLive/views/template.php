@@ -57,7 +57,9 @@
 
 	$router->add('/webprogrammingfcefy2020/Golive/inicio', 'UserController::signupController');
 
-	$router->add('/webprogrammingfcefy2020/Golive/Alta-Institucion', 'UserController::Alta_Institution');
+	$router->add('/webprogrammingfcefy2020/Golive/Alta-Institucion', 'InstitutionController::altaController');
+
+	$router->add('/webprogrammingfcefy2020/Golive/perfilInstitucion', 'InstitutionController::profileController');
 
 	$router->run();
 
