@@ -49,7 +49,7 @@ class InstitutionController{
     
     public function profileController()
     {
-        include "views/modules/atlantis/index.php";
+        include "views/modules/atlantis/index.html";
         return '' ; 
     }
 }
