@@ -14,70 +14,32 @@ include "views/modules/nav.php";
               <p>deydey@theEmail.com</p>
           </div>
 
-          <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a href="#"> <i class="fa fa-user"></i> Perfil</a></li>
-              <li><a href="#"> <i class="fa fa-calendar"></i> Actividad Reciente </a></li>
-              <li><a href="#"> <i class="fa fa-edit"></i> Editar Perfil</a></li>
+          <ul class="nav nav-pills nav-stacked row">
+              <li class="active col-12"><a href="#"> <i class="fa fa-user"></i> Perfil</a></li>
+              <li class="col-12"><a href="#" > <i class="fa fa-calendar"></i> Actividad Reciente </a></li>
+              <li class="col-12"><a href="#" > <i class="fa fa-edit"></i> Editar Perfil</a></li>
           </ul>
       </div>
       <div class="alta-gym">
-        <p class="h5">¿Eres dueño de un gimnacio?</p>
-        <form action="http://localhost/webprogrammingfcefy2020/Golive/Alta-Institucion" method="POST">
-          <button class="btn btn-outline-danger">Cuenta Institución</button>
-        </form>
+        <p class="h5">¿Eres dueño de una institución?</p>
+        
+          <a class="btn btn-outline-dark">Cuenta Institución</a>
 
       </div>
   </div>
   <div class="profile-info col-md-9">
-      <div class="panel">
-          <form>
-              <textarea placeholder="Whats in your mind today?" rows="2" class="form-control input-lg p-text-area"></textarea>
-          </form>
-          <footer class="panel-footer">
-              <button class="btn btn-warning pull-right">Post</button>
-              <ul class="nav nav-pills">
-                  <li>
-                      <a href="#"><i class="fa fa-map-marker"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fa fa-camera"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class=" fa fa-film"></i></a>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fa fa-microphone"></i></a>
-                  </li>
-              </ul>
-          </footer>
-      </div>
+      
       
 
       <div class="panel">
           <div class="bio-graph-heading">
               Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ispum. Aliquam ac magna metus.
           </div>
-          <div class="panel-body bio-graph-info ">
-              <h1 >Información</h1>
-              <div class="row">
-                  <div class="bio-row col-lg-6 col-sm-12  w-100">
-                      <p><span>Nombre </span>: Camila</p>
-                  </div>
-                  <div class="bio-row col-lg-6 col-sm-12 w-100">
-                      <p><span>Apellido </span>: smith</p>
-                  </div>
-                  <div class="bio-row col-lg-6 col-sm-12 w-100">
-                      <p><span>Teléfono </span>: Australia</p>
-                  </div>
-                  <div class="bio-row col-lg-6 col-sm-12 w-100">
-                      <p><span>Email</span>: 13 July 1983</p>
-                  </div>
-                  
-              </div>
-          </div>
+          
       </div>
 
       <div class="schedules">
+          <div class="h3 text-center">Tus Horarios</div>
           <div class="row">
               <div class="col-md-6">
                   <div class="panel">
@@ -151,7 +113,7 @@ include "views/modules/nav.php";
 <style type="text/css">
   body {
     color: #797979;
-    background: linear-gradient(45deg, rgba(11, 0, 80, 0.9) 0%, rgba(4, 210, 115, 0.9) 100%), url("../../../assets/app/img/hero-bg.jpg") center center no-repeat;
+    background: linear-gradient(45deg, rgba(11, 0, 80, 0.9) 0%, rgba(4, 210, 115, 0.9) 80%), url("./././assets/app/img/SimpleShiny.png") center repeat ;;
     font-family: 'Poppins', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
@@ -178,7 +140,6 @@ include "views/modules/nav.php";
 }
 
 .profile-nav .user-heading {
-    background: #04d273;
     color: #fff;
     border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
@@ -274,20 +235,18 @@ include "views/modules/nav.php";
 }
 
 .alta-gym{
-  border: 1px solid #fff;
   padding: 10% 5%;
   text-align: center; 
-  background: #dc3545;
   margin-top: 2vh;
   color:#f9f8ff;
 }
 
 
-.alta-gym button{
-  background:#fff;
+.alta-gym a{
   margin-top: 10px;
+  color: #f8f9ff;
 }
-.alta-gym button:hover{
+.alta-gym a:hover{
   border: 1px solid #fff;
 }
 
@@ -297,7 +256,6 @@ include "views/modules/nav.php";
 }
 
 .bio-graph-heading {
-    background: #04d273;
     color: #fff;
     text-align: center;
     font-style: italic;
@@ -570,7 +528,14 @@ ul.summary-list > li:last-child  {
 
 .schedules{
   margin: 5% 0;
+}
 
+.schedules .h3{
+  color: #f9f8ff;
+}
+
+.container{
+  padding-bottom: 3%;
 }
 
 </style>
