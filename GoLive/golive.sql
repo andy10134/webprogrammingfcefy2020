@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-11-2020 a las 19:22:52
+-- Tiempo de generación: 25-11-2020 a las 01:05:01
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -130,7 +130,8 @@ CREATE TABLE `roles` (
 INSERT INTO `roles` (`id`, `rolName`) VALUES
 (1, 'Administracion'),
 (2, 'Usuario'),
-(3, 'Administrador de Institución');
+(3, 'Administrador de Institución'),
+(4, 'Entrenador');
 
 -- --------------------------------------------------------
 
@@ -184,7 +185,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `roleId`, `genderId`, `name`, `lastName`, `phoneNum`, `email`, `username`, `password`) VALUES
 (16, 2, 2, 'Ana', 'Carbajo', '2644636436', 'aniic.1701@gmail.com', 'anacarbajo17', '$2a$07$asxx54ahjppf45sd87a5au.oN8fCpmgc3ccW1Tmi2p3jzZrRyqNYi'),
 (17, 2, 1, 'pepito', 'hongito', '2644158762', 'gdfgfd@gmail.com', 'elpepe', '$2a$07$asxx54ahjppf45sd87a5aubCwEL5ItHj/a/0pgDqhsxoGZfT6ANwG'),
-(18, 2, 2, 'lola', 'mento', '2644158762', 'lolamento@gmail.com', 'lolamento', '$2a$07$asxx54ahjppf45sd87a5au4MDyxXUQ/1TR2kvy8yihDSTQWeUs7ZO');
+(18, 2, 2, 'lola', 'mento', '2644158762', 'lolamento@gmail.com', 'lolamento', '$2a$07$asxx54ahjppf45sd87a5au4MDyxXUQ/1TR2kvy8yihDSTQWeUs7ZO'),
+(27, 2, 1, 'luis', 'gomez', '2644554665', 'luisgomez2@gmail.com', 'luisgomez', '$2a$07$asxx54ahjppf45sd87a5auAzAgw0JSt092xCmGge/iyNCu8y/LZdS');
 
 --
 -- Índices para tablas volcadas
@@ -308,7 +310,7 @@ ALTER TABLE `institutions`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `rooms`
@@ -326,7 +328,7 @@ ALTER TABLE `schedules`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Restricciones para tablas volcadas

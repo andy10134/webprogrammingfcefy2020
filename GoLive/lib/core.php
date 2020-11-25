@@ -8,6 +8,7 @@ define("LIB_ROUTE", ROOT."lib/");
 require 'Router.php';
 require 'Route.php';
 require CONTROLLERS_ROUTE."/User.php";
+require CONTROLLERS_ROUTE."/Institution.php";
 include CONTROLLERS_ROUTE."/template.php";
 //include ROOT."models/Session.php";
 include 'models/User.php';

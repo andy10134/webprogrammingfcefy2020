@@ -20,7 +20,7 @@ include "nav.php";
             }elseif($_SESSION["genderId"] == 2){
               $genero = 'Bienvenida';
             }else{
-              $genero = 'Bienvenidx';
+              $genero = 'Bienvenide';
             }
             echo '<h1>'.$genero.' '.$_SESSION["name"].' '.$_SESSION["lastName"].'</h1>
             <h2>Aquí comienza la administración smart ;)</h2>

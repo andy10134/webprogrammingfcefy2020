@@ -144,16 +144,6 @@ class UserController
             echo 0;
         }
     }
-
-    public function Alta_Institution(){
-        if (!isset($__POST)) {
-            include 'views/modules/Alta-institucion.php';
-        }
-
-
-
-        return '';
-    }
     
     public function profileImageController()
     {
@@ -191,6 +181,14 @@ class UserController
             }
         }else{
             include 'views/modules/form.php';
+        }
+        return '';
+    }
+
+    public function registerTrainner(){
+        $response = UserModel::registerTrainner();
+        if($response == ''){
+            header("Location: http://localhost/webprogrammingfcefy2020/Golive/perfil");
         }
         return '';
     }

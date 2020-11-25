@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 0 10px 24px;
 }
 
-.nav-menu a {
+.nav-menu a:not(.get-started-btn){
   display: block;
   position: relative;
   color: rgba(255, 255, 255, 0.7);

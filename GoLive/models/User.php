@@ -83,4 +83,12 @@ class UserModel
         return $stmt ->fetch();
     }
 
+    public function registerTrainner(){
+        $errores = '';
+        $id = $_SESSION["id"];
+        $myInsert = Conexion::conectar()->prepare("UPDATE users SET roleId = 4 where id= $id");
+
+        $myInsert->execute();
+        return($errores);
+    }
 }
