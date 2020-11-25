@@ -2,29 +2,62 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Golive</title>
 
-	<!--Techie-->
-	<!-- Favicons -->
-	<link href="assets/app/img/favicon.ico" rel="icon">
-	<link href="assets/app/img/apple-touch-icon.png" rel="apple-touch-icon">
+	<?php
+	if(isset($_SESSION["id"]) && $_SESSION["roleId"] == 3){
+		echo('
+			<!--Atlantis-->
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+			<link rel="icon" href="assets/atlantis/img/icon.ico" type="image/x-icon"/>
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+			<!-- Fonts and icons -->
+			<script src="assets/atlantis/js/plugin/webfont/webfont.min.js"></script>
+			<script>
+			WebFont.load({
+				google: {"families":["Lato:300,400,700,900"]},
+				custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ["../assets/css/fonts.min.css"]},
+				active: function() {
+					sessionStorage.fonts = true;
+				}
+				});
+			</script>
 
-	<!-- Vendor CSS Files -->
-	<link href="assets/app/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/app/vendor/icofont/icofont.min.css" rel="stylesheet">
-	<link href="assets/app/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-	<link href="assets/app/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-	<link href="assets/app/vendor/venobox/venobox.css" rel="stylesheet">
-	<link href="assets/app/vendor/aos/aos.css" rel="stylesheet">
+			<!-- CSS Files -->
+			<link rel="stylesheet" href="assets/atlantis/css/bootstrap.min.css">
+			<link rel="stylesheet" href="assets/atlantis/css/atlantis.min.css">
 
-	<!-- Template Main CSS File -->
-	<link href="assets/app/css/style.css" rel="stylesheet">
+		');
+	}else{
+		echo('
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			
+			<!--Techie-->
+			<!-- Favicons -->
+			<link href="assets/app/img/favicon.ico" rel="icon">
+			<link href="assets/app/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+			<!-- Google Fonts -->
+			<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+			<!-- Vendor CSS Files -->
+			<link href="assets/app/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+			<link href="assets/app/vendor/icofont/icofont.min.css" rel="stylesheet">
+			<link href="assets/app/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+			<link href="assets/app/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+			<link href="assets/app/vendor/venobox/venobox.css" rel="stylesheet">
+			<link href="assets/app/vendor/aos/aos.css" rel="stylesheet">
+
+			<!-- Template Main CSS File -->
+			<link href="assets/app/css/style.css" rel="stylesheet">
+		');
+	
+	}
+
+	?>
 
 
 </head>
