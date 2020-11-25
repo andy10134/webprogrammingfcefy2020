@@ -2,7 +2,7 @@
 include "nav.php";
 ?>
 
-<main class="row align-items-center justify-content-center m-0">
+<main class="row align-items-center justify-content-center mt-3 mb-5">
   
 
   <section class="container col-lg-10 col-xs-11 row d-flex p-0">

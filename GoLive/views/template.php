@@ -16,12 +16,12 @@
 			<!-- Fonts and icons -->
 			<script src="assets/atlantis/js/plugin/webfont/webfont.min.js"></script>
 			<script>
-			WebFont.load({
-				google: {"families":["Lato:300,400,700,900"]},
-				custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ["../assets/css/fonts.min.css"]},
-				active: function() {
-					sessionStorage.fonts = true;
-				}
+				WebFont.load({
+					google: {"families":["Lato:300,400,700,900"]},
+					custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ["assets/atlantis/css/fonts.min.css"]},
+					active: function() {
+						sessionStorage.fonts = true;
+					}
 				});
 			</script>
 
@@ -62,7 +62,9 @@
 
 </head>
 
-<body>
+<body <?php if(isset($_SESSION["id"]) && $_SESSION["roleId"] == 3){
+	echo('data-background-color="dark"');
+} ?>>
 
 	<?php
 
@@ -99,44 +101,44 @@
 	if(isset($_SESSION["id"]) && $_SESSION["roleId"] == 3){
 		echo('
 			<!--Atlantis-->
-			<script src="assets/atlantis/js/core/jquery.3.2.1.min.js"></script>
-			<script src="assets/atlantis/js/core/popper.min.js"></script>
-			<script src="assets/atlantis/js/core/bootstrap.min.js"></script>
+			<!--   Core JS Files   -->
+	<script src="assets/atlantis/js/core/jquery.3.2.1.min.js"></script>
+	<script src="assets/atlantis/js/core/popper.min.js"></script>
+	<script src="assets/atlantis/js/core/bootstrap.min.js"></script>
 
-			<!-- jQuery UI -->
-			<script src="assets/atlantis/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-			<script src="assets/atlantis/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="assets/atlantis/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="assets/atlantis/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 
-			<!-- jQuery Scrollbar -->
-			<script src="assets/atlantis/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<!-- jQuery Scrollbar -->
+	<script src="assets/atlantis/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
 
-			<!-- Chart JS -->
-			<script src="assets/atlantis/js/plugin/chart.js/chart.min.js"></script>
+	<!-- Chart JS -->
+	<script src="assets/atlantis/js/plugin/chart.js/chart.min.js"></script>
 
-			<!-- jQuery Sparkline -->
-			<script src="assets/atlantis/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+	<!-- jQuery Sparkline -->
+	<script src="assets/atlantis/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
 
-			<!-- Chart Circle -->
-			<script src="assets/atlantis/js/plugin/chart-circle/circles.min.js"></script>
+	<!-- Chart Circle -->
+	<script src="assets/atlantis/js/plugin/chart-circle/circles.min.js"></script>
 
-			<!-- Datatables -->
-			<script src="assets/atlantis/js/plugin/datatables/datatables.min.js"></script>
+	<!-- Datatables -->
+	<script src="assets/atlantis/js/plugin/datatables/datatables.min.js"></script>
 
-			<!-- Bootstrap Notify -->
-			<script src="assets/atlantis/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+	<!-- Bootstrap Notify -->
+	<script src="assets/atlantis/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
-			<!-- jQuery Vector Maps -->
-			<script src="assets/atlantis/js/plugin/jqvmap/jquery.vmap.min.js"></script>
-			<script src="assets/atlantis/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+	<!-- jQuery Vector Maps -->
+	<script src="assets/atlantis/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+	<script src="assets/atlantis/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
 
-			<!-- Sweet Alert -->
-			<script src="assets/atlantis/js/plugin/sweetalert/sweetalert.min.js"></script>
+	<!-- Sweet Alert -->
+	<script src="assets/atlantis/js/plugin/sweetalert/sweetalert.min.js"></script>
 
-			<!-- Atlantis JS -->
-			<script src="assets/atlantis/js/atlantis.min.js"></script>
+	<!-- Atlantis JS -->
+	<script src="assets/atlantis/js/atlantis.min.js"></script>
 
-			<!-- Sweet Alert JS -->
 			
 
 
@@ -259,6 +261,20 @@
 					var phoneNum = $(this).val();
 	
 					if(regex.test(phoneNum)){
+						$(this).addClass("is-valid").removeClass("is-invalid");
+						$("#submitButton").prop("disabled", false);
+					}else{
+						$(this).addClass("is-invalid").removeClass("is-valid");
+						$("#submitButton").prop("disabled", true);
+					}
+				});
+
+				$("#password").on( "keyup" ,function () {
+					console.log("xd");
+					var regex = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+					var password = $(this).val();
+	
+					if(regex.test(password)){
 						$(this).addClass("is-valid").removeClass("is-invalid");
 						$("#submitButton").prop("disabled", false);
 					}else{

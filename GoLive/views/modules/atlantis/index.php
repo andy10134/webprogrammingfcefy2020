@@ -1,6 +1,6 @@
 
 
-<div class="wrapper" data-background-color="dark">
+<div class="wrapper">
 		<div class="main-header">
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="dark2">
@@ -471,7 +471,7 @@
 							<div class="collapse" id="maps">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="maps/jqvmap.html">
+										<a href="atlantis/maps/jqvmap.html">
 											<span class="sub-item">JQVMap</span>
 										</a>
 									</li>

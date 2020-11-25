@@ -11,20 +11,29 @@ class InstitutionController{
             } 
             redireccionar();
             </script>';
-        }else if(isset($_POST["adress"]) && isset($_POST["phone"]) && isset($_POST["scheadule"]) && isset($_POST["socialMedia"]))
+        }else if(isset($_POST["adress"]) && isset($_POST["phone"]) && isset($_POST["socialMedia"]) && isset($_POST["dia-1"]) && isset($_POST["hora-1"]))
         {   
             if(preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["adress"]) && 
             preg_match('/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/', $_POST["phone"]) && 
-            preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["scheadule"]) &&
             filter_var($_POST["socialMedia"], FILTER_VALIDATE_URL)
             )
             {
+                $contador = 1;
+                $schedule = '';
+                while(isset($_POST['dia-'.$contador])){
+                    $schedule .= $_POST['dia-'.$contador].' '.$_POST['hora-'.$contador];
+                    $contador ++;
+                }
                 $Data = array(
-                    'adress'=> $_POST['adress'],
-                    'phone' => $_POST['phone'],
-                    'scheadule' => $_POST['scheadule'],
-                    'socialMedia' => $_POST['socialMedia'],
+                    ':adress'=> $_POST['adress'],
+                    ':phone' => $_POST['phone'],
+                    ':schedule' => $schedule,
+                    ':staff' => '',
+                    ':socialMedia' => $_POST['socialMedia'],
+                    ':userId' => $_SESSION['id']
                 );
+
+                var_dump($Data);
                 $resultado = InstitutionModel::alta($Data);
                 
                 if($resultado == '')

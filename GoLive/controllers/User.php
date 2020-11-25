@@ -16,7 +16,7 @@ class UserController
         }else if(isset($_POST["username"]) && isset($_POST["password"]))
         {   
             if( preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["username"]) &&
-                preg_match('/^(?=.*[A-Z])(?=.*[!@#$&*._-])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,15}$/', $_POST["password"]))
+                preg_match('/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/', $_POST["password"]))
             {
                 $contraseña = crypt($_POST["password"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$'); //encriptamos la contraseña
                 $datosController = array("usuario"=>$_POST["username"],
@@ -67,7 +67,7 @@ class UserController
             echo(preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["username"]));
             echo(preg_match('/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/', $_POST["email"]));
             echo(preg_match('/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/', $_POST["phoneNum"]));
-            echo(preg_match('/^(?=.*[A-Z])(?=.*[!@#$&*._-])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,15}$/', $_POST["password"]));
+            echo(preg_match('/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/', $_POST["password"]));
             echo(preg_match('/^[1-3]{1,1}$/', $_POST["gender"]));
 
             if( 
@@ -76,7 +76,7 @@ class UserController
                 preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["username"]) &&
                 preg_match('/^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/', $_POST["email"]) &&
                 preg_match('/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/', $_POST["phoneNum"]) &&
-                preg_match('/^(?=.*[A-Z])(?=.*[!@#$&*._-])(?=.*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,15}$/', $_POST["password"]) && // REVISAR EXPRESION REGULAR
+                preg_match('/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/', $_POST["password"]) && // REVISAR EXPRESION REGULAR
                 preg_match('/^[1-3]{1,1}$/', $_POST["gender"]))
             {
                 $password = crypt($_POST['password'], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$'); //encriptamos la contraseña
