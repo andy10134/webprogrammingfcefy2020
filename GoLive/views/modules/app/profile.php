@@ -10,21 +10,20 @@ include "views/modules/nav.php";
               <a href="#">
                   <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
               </a>
-              <h1>Camila Smith</h1>
+              <h1 class="mt-2">Camila Smith</h1>
               <p>deydey@theEmail.com</p>
           </div>
 
           <ul class="nav nav-pills nav-stacked row">
-              <li class="active col-12"><a href="#"> <i class="fa fa-user"></i> Perfil</a></li>
-              <li class="col-12"><a href="#" > <i class="fa fa-calendar"></i> Actividad Reciente </a></li>
-              <li class="col-12"><a href="#" > <i class="fa fa-edit"></i> Editar Perfil</a></li>
+              <li class="active col-12"><a href="#"> <i class="icofont-male"></i>  Perfil </a></li>
+              <li class="col-12"><a href="#" > <i class="icofont-contacts"></i> Actividad Reciente  </a></li>
+              <li class="col-12"><a href="#" > <i class="icofont-spanner"></i> Editar Perfil </a></li>
           </ul>
       </div>
       <div class="alta-gym">
-        <p class="h5">¿Eres dueño de una institución?</p>
-        
+        <p class="h5">Actualiza tu cuenta</p>
           <a class="btn btn-outline-dark">Cuenta Institución</a>
-
+          <a class="btn btn-outline-success" onclick="actualizarEmpl()">Cuenta Empleado</a>
       </div>
   </div>
   <div class="profile-info col-md-9">
@@ -32,8 +31,9 @@ include "views/modules/nav.php";
       
 
       <div class="panel">
-          <div class="bio-graph-heading">
-              Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ispum. Aliquam ac magna metus.
+
+          <div class="bio-graph-heading" id="frase">
+              
           </div>
           
       </div>
@@ -102,7 +102,37 @@ include "views/modules/nav.php";
   </div>
 </div>
 </div>
+
+
 <div id="preloader"></div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+
+  function actualizarEmpl(){
+    swal({
+    title: "Bien Hecho",
+    text: "Tu cuenta ha sido actualizada satisfactoriamente",
+    icon: "success",
+    button: "Aww yiss!",
+    });
+
+  }
+
+  var frases = [];
+  frases.push("Tu eres tu único límite");
+  frases.push("No pares cuando estés cansado, detente cuando hayas terminado");
+  frases.push("Limpia tu mente del no puedo");
+
+  var frase = document.getElementById("frase");
+  frase.innerHTML = frases[Math.floor(Math.random() * frases.length)];
+
+  var arre = document.getElementsByClassName("get-started-btn");
+  for (var el of arre){
+      el.style.display = "none";
+  }
+
+</script>
+
 
 
 <?php
@@ -123,7 +153,9 @@ include "views/modules/nav.php";
     -moz-font-smoothing: antialiased;
 }
 
-
+i{
+  color: #fff !important;
+}
 
 .panel{
   margin-top: 2.5%;
@@ -148,9 +180,7 @@ include "views/modules/nav.php";
 }
 
 .profile-nav .user-heading.round a  {
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border: 10px solid rgba(255,255,255,0.3);
+    
     display: inline-block;
 }
 
@@ -194,9 +224,8 @@ include "views/modules/nav.php";
 }
 
 .profile-nav ul > li > a:hover, .profile-nav ul > li > a:focus, .profile-nav ul li.active  a {
-    background: #f8f7f5 !important;
-    border-left: 5px solid #04d273;
-    color: #89817f !important;
+
+    color: #f8f9ff im !important;
 }
 
 .profile-nav ul > li:last-child > a:last-child {
@@ -537,5 +566,7 @@ ul.summary-list > li:last-child  {
 .container{
   padding-bottom: 3%;
 }
+
+
 
 </style>

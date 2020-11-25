@@ -136,6 +136,10 @@
 			<!-- Atlantis JS -->
 			<script src="assets/atlantis/js/atlantis.min.js"></script>
 
+			<!-- Sweet Alert JS -->
+			
+
+
 		');
 	}else{
 		echo('

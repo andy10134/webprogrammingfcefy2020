@@ -23,46 +23,37 @@ include "nav.php";
        Actualiza tu cuenta
     </h2>
 
-       <form METHOD="POST" action="">
-               <div class="form-group row d-flex flex-column align-items-center">
+       <form METHOD="POST" action="" >
+               <div class="form-group row d-flex flex-column align-items-center" id="formulario">
 
                         <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="firstName" placeholder="Tu direccion" id="name">
                         <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="lastName" placeholder="Tu Teléfono" id="lastname">
-                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="username" id="username" placeholder="Nombre de usuario">
+
+                        <div class="h2 mt-3">Horarios</div>
+                        <select class="form-control  pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" id="dia" name="dia-1">
+                          <option value="lunes">Lunes</option>
+                          <option value="lunes">Martes</option>
+                          <option value="lunes">Miércoles</option>
+                          <option value="lunes">Jueves</option>
+                          <option value="lunes">Viernes</option>
+                          <option value="lunes">Sábado</option>
+                        </select>
+
+                         <input class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="time" id="hora" name="hora-1">
+
+
                         
                         <!--<div class="invalid-feedback">
                           Nombre de usuario no valido :(
                         </div>-->
 
-                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="email" name="email" placeholder="E-mail" id="email">
+                        
 
-                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="phone" name="phoneNum" placeholder="Teléfono" id="phoneNum">
-                        <input required class="form-control  mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="password" name="password" placeholder="Contraseña" id="password">
-                        <fieldset class="form-group">
-    
-                                <legend class="col-form-label col-sm-2 pt-4">Género</legend>
-                                <div class="row">
-                                    <div class="form-check col-lg-4 col-md-12">
-                                        <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="1" checked="">
-                                        <label class="form-check-label" for="gridRadios1">
-                                            Masculino
-                                        </label>
-                                    </div>
-                                    <div class="form-check col-lg-4 col-md-12">
-                                        <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="2">
-                                        <label class="form-check-label" for="gridRadios2">
-                                            Femenino
-                                        </label>
-                                    </div>
-                                    <div class="form-check col-lg-4 col-md-12">
-                                        <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="3">
-                                        <label class="form-check-label" for="gridRadios2">
-                                            Otro    
-                                        </label>
-                                    </div>
-                            </div>
-                        </fieldset>
-                        <button type="submit" class=" boton rounded-pill mt-2 col-md-6 col-xs-8 " id="submitButton">Registrarse</button>
+                        <button class="btn btn-outline-primary mt-3" id="add_button">
+                          <i class="icofont-plus"></i>
+                        </button>
+                       
+                        <button type="submit" class=" boton rounded-pill mt-2 col-md-6 col-xs-8 " id="submitButton">Actualizar</button>
                     </div>
             </form>    
     </div>
@@ -71,10 +62,42 @@ include "nav.php";
 
   </main>
 
+  <?php include "footer.php" ?>
+
   <div id="preloader"></div>
   
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <script>
+    var elemento = document.getElementById("add_button");
+    var form     = document.getElementById("formulario");
+    var inputs   = [];
+    var contador = 2;
+    function clonar(){
+        var dia      = document.getElementById ("dia");
+        var hora     = document.getElementById("hora");
+        inputs[0] = dia.cloneNode(true);
+        inputs[1] = hora.cloneNode(true);
+
+        inputs[0].setAttribute("name", "dia-"+ String(contador++)) ; 
+        inputs[0].setAttribute("name", "hora-"+ String(contador++)) ; 
+        inputs[0].classList.add("mt-5");
+
+        formulario.insertBefore(inputs[0], elemento);
+        formulario.insertBefore(inputs[1], elemento);
+    }
+    elemento.addEventListener("click", clonar, false);
+
+    frase.innerHTML = frases[Math.floor(Math.random() * frases.length)];
+
+    var arre = document.getElementsByClassName("get-started-btn");
+    for (var el of arre){
+        el.style.display = "none";
+    }
+
+  </script>
+
 </body>
 </html>
 
@@ -158,7 +181,7 @@ main{
 
 body{
   width: 100%;
-  background: linear-gradient(45deg, rgba(11, 0, 80, 0.9) 0%, rgba(4, 210, 115, 0.9) 100%), url("../../../assets/app/img/hero-bg.jpg");
+  background: linear-gradient(45deg, rgba(11, 0, 80, 0.9) 0%, rgba(4, 210, 115, 0.9) 100%), url("./././assets/app/img/hero-bg.jpg");
   background-size: cover;
   height: 100vh;
 }
@@ -239,4 +262,7 @@ form .boton:hover{
   color:  rgb(11,0,80);
   border: rgb(11,0,80) 1.5px solid;
 }
+
+
+
 </style>
