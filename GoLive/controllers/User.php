@@ -25,8 +25,12 @@ class UserController
                 $resultado = UserModel::loginModel($datosController);
                 
                 if($resultado == '')
-                {
-                    header("Location: http://localhost/webprogrammingfcefy2020/Golive/");
+                {   
+                    if($_SESSION["roleId"] != 3){
+                        header("Location: http://localhost/webprogrammingfcefy2020/Golive/");
+                    }else{
+                        header("Location: http://localhost/webprogrammingfcefy2020/Golive/perfilInstitucion");
+                    }
                 }
                 else
                 {
