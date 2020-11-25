@@ -12,6 +12,11 @@ include "views/modules/nav.php";
               </a>
               <h1 class="mt-2">Camila Smith</h1>
               <p>deydey@theEmail.com</p>
+              <?php
+                if($_SESSION["roleId"] == 4){
+                echo('<p>ENTRENADOR</p>');  
+                }
+            ?>
           </div>
 
           <ul class="nav nav-pills nav-stacked row">
@@ -22,8 +27,14 @@ include "views/modules/nav.php";
       </div>
       <div class="alta-gym">
         <p class="h5">Actualiza tu cuenta</p>
-          <a class="btn btn-outline-dark">Cuenta Institución</a>
-          <a class="btn btn-outline-success" onclick="actualizarEmpl()">Cuenta Empleado</a>
+          <a class="btn btn-outline-dark" href="Alta-Institucion">Cuenta Institución</a>
+          <?php
+          if($_SESSION["roleId"] != 4){
+            echo('<a class="btn btn-outline-success" onclick="actualizarEmpl()">Cuenta Entrenador</a>');  
+          }else{
+            echo('<a class="btn btn-outline-success" onclick="actualizarUsuario()">Cuenta Usuario</a>'); 
+          }
+          ?>
       </div>
   </div>
   <div class="profile-info col-md-9">
@@ -109,13 +120,31 @@ include "views/modules/nav.php";
 <script>
 
   function actualizarEmpl(){
+    <?php
+    $response = UserController::registerTrainner();
+    ?>
     swal({
     title: "Bien Hecho",
     text: "Tu cuenta ha sido actualizada satisfactoriamente",
     icon: "success",
     button: "Aww yiss!",
+    }).then(function() {
+    window.location = "http://localhost/webprogrammingfcefy2020/Golive/perfil";
     });
+  }
 
+  function actualizarUsuario(){
+    <?php
+    $response = UserController::registerUser();
+    ?>
+    swal({
+    title: "Bien Hecho",
+    text: "Tu cuenta ha sido actualizada satisfactoriamente",
+    icon: "success",
+    button: "Aww yiss!",
+    }).then(function() {
+    window.location = "http://localhost/webprogrammingfcefy2020/Golive/perfil";
+    });
   }
 
   var frases = [];

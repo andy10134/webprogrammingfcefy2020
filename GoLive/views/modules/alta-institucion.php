@@ -9,7 +9,7 @@ include "nav.php";
     <div class="info col-lg-4 col-md-12 text-center d-flex flex-column justify-content-center ">
       <img src="assets/app/img/imgform.png" class="imgform">
       <p class="h3 pt-1 pb-3">
-       Actualiza tu cuenta a Gimnacio ;)
+       Actualiza tu cuenta a Institución ;)
       </p>
       <p class="lead pb-3">
         Disfruta de los beneficios de trabajar con nosotros
@@ -26,10 +26,11 @@ include "nav.php";
        <form METHOD="POST" action="" >
                <div class="form-group row d-flex flex-column align-items-center" id="formulario">
 
-                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="firstName" placeholder="Tu direccion" id="name">
-                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="lastName" placeholder="Tu Teléfono" id="lastname">
+                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="adress" placeholder="Tu direccion" id="adress">
+                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="phone" placeholder="Tu Teléfono" id="phone">
+                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="socialMedia" placeholder="Tu Sitio Web" id="socialMedia">
 
-                        <div class="h2 mt-3">Horarios</div>
+                        <h2 class="h2 mt-3">Horarios</h2>
                         <select class="form-control  pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" id="dia" name="dia-1">
                           <option value="lunes">Lunes</option>
                           <option value="lunes">Martes</option>

@@ -187,9 +187,11 @@ class UserController
 
     public function registerTrainner(){
         $response = UserModel::registerTrainner();
-        if($response == ''){
-            header("Location: http://localhost/webprogrammingfcefy2020/Golive/perfil");
-        }
+        return '';
+    }
+
+    public function registerUser(){
+        $response = UserModel::registerUser();
         return '';
     }
 }

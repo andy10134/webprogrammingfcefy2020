@@ -89,6 +89,17 @@ class UserModel
         $myInsert = Conexion::conectar()->prepare("UPDATE users SET roleId = 4 where id= $id");
 
         $myInsert->execute();
+        $_SESSION["roleId"] = 4;
+        return($errores);
+    }
+
+    public function registerUser(){
+        $errores = '';
+        $id = $_SESSION["id"];
+        $myInsert = Conexion::conectar()->prepare("UPDATE users SET roleId = 2 where id= $id");
+
+        $myInsert->execute();
+        $_SESSION["roleId"] = 2;
         return($errores);
     }
 }
