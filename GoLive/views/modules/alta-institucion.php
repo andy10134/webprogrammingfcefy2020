@@ -32,19 +32,57 @@ include "nav.php";
                         <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="socialMedia" placeholder="Sitio Web" id="socialMedia">
 
                         <h2 class="h2 mt-3">Horarios</h2>
-                        <select class="form-control  pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" id="dia" name="dia-1">
-                          <option value="lunes">Lunes</option>
-                          <option value="lunes">Martes</option>
-                          <option value="lunes">Miércoles</option>
-                          <option value="lunes">Jueves</option>
-                          <option value="lunes">Viernes</option>
-                          <option value="lunes">Sábado</option>
-                        </select>
-
-                         <input class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="time" id="hora" name="hora-1">
-
-
                         
+                        <div class="form-row pt-3 pb-3 pl-0 pr-0 col-lg-8 col-md-10 col-xs-12">
+                          <div class="col">
+
+                            <select class="form-control" id="dia" name="dia-1">
+                                <option value="Lunes">Lunes</option>
+                                <option value="Martes">Martes</option>
+                                <option value="Miercoles">Miércoles</option>
+                                <option value="Jueves">Jueves</option>
+                                <option value="Viernes">Viernes</option>
+                                <option value="Sábado">Sábado</option>
+                            </select>
+
+                          </div>
+                          <div class="col">
+
+                            <input class="form-control pt-3 pb-3" type="time" id="hora-apertura" name="hora-apertura-1">
+
+                          </div>
+                          <div class="col">
+
+                            <input class="form-control pt-3 pb-3" type="time" id="hora-cierre" name="hora-cierre-1">
+
+                          </div>
+                        </div>
+
+                        <div class="form-row pt-3 pb-3 pl-0 pr-0 col-lg-8 col-md-10 col-xs-12">
+                          <div class="col">
+
+                            <select class="form-control" id="dia" name="dia-1">
+                                <option value="Lunes">Lunes</option>
+                                <option value="Martes">Martes</option>
+                                <option value="Miercoles">Miércoles</option>
+                                <option value="Jueves">Jueves</option>
+                                <option value="Viernes">Viernes</option>
+                                <option value="Sábado">Sábado</option>
+                            </select>
+
+                          </div>
+                          <div class="col">
+
+                            <input class="form-control pt-3 pb-3" type="time" id="hora-apertura" name="hora-apertura-1">
+
+                          </div>
+                          <div class="col">
+
+                            <input class="form-control pt-3 pb-3" type="time" id="hora-cierre" name="hora-cierre-1">
+
+                          </div>
+                        </div>
+
                         <!--<div class="invalid-feedback">
                           Nombre de usuario no valido :(
                         </div>-->
@@ -78,16 +116,24 @@ include "nav.php";
     var contador = 2;
     function clonar(){
         var dia      = document.getElementById ("dia");
-        var hora     = document.getElementById("hora");
+        var hora1     = document.getElementById("hora-apertura");
+        var hora2     = document.getElementById("hora-cierre");
         inputs[0] = dia.cloneNode(true);
-        inputs[1] = hora.cloneNode(true);
+        inputs[1] = hora1.cloneNode(true);
+        inputs[2] = hora2.cloneNode(true);
 
-        inputs[0].setAttribute("name", "dia-"+ String(contador++)) ; 
-        inputs[0].setAttribute("name", "hora-"+ String(contador++)) ; 
+        inputs[0].setAttribute("name", "dia-"+ String(contador)) ; 
+        inputs[0].setAttribute("id", "dia-"+ String(contador)) ;
+        inputs[1].setAttribute("name", "hora-apertura-"+ String(contador)) ; 
+        inputs[1].setAttribute("id", "hora-apertura-"+ String(contador)) ;
+        inputs[2].setAttribute("name", "hora-cierre-"+ String(contador)) ; 
+        inputs[2].setAttribute("id", "hora-cierre-"+ String(contador)) ;
+        contador ++;
         inputs[0].classList.add("mt-5");
 
         formulario.insertBefore(inputs[0], elemento);
         formulario.insertBefore(inputs[1], elemento);
+        formulario.insertBefore(inputs[2], elemento);
     }
     elemento.addEventListener("click", clonar, false);
 
@@ -215,7 +261,7 @@ h2.h2{
   padding: 5% ;
   color : #f9f8ff;
   /*background: #333a5aa3;*/
-	background: linear-gradient(90deg, rgba(11,0,80,1) 0%, rgba(7,4,41,1) 100%);
+	background: linear-gradient(90deg, rgba(11,0,80,0.64) 0%, rgba(7,4,41,0.64) 100%);
   border-radius: 40px 0 0 40px;
 }
 

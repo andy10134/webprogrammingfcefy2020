@@ -11,7 +11,7 @@ class InstitutionController{
             } 
             redireccionar();
             </script>';
-        }else if(isset($_POST["name"]) && isset($_POST["adress"]) && isset($_POST["phone"]) && isset($_POST["socialMedia"]) && isset($_POST["dia-1"]) && isset($_POST["hora-1"]))
+        }else if(isset($_POST["name"]) && isset($_POST["adress"]) && isset($_POST["phone"]) && isset($_POST["socialMedia"]) && isset($_POST["dia-1"]) && isset($_POST["hora-apertura-1"]) && isset($_POST["hora-cierre-1"]))
         {   
             if(preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["name"]) && 
             preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["adress"]) && 
@@ -22,7 +22,7 @@ class InstitutionController{
                 $contador = 1;
                 $schedule = '';
                 while(isset($_POST['dia-'.$contador])){
-                    $schedule .= $_POST['dia-'.$contador].' '.$_POST['hora-'.$contador];
+                    $schedule .= $_POST['dia-'.$contador].' '.$_POST['hora-apertura-'.$contador].' '.$_POST['hora-cierre-'.$contador];
                     $contador ++;
                 }
                 $Data = array(
