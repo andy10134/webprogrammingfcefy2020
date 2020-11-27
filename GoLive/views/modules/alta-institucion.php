@@ -26,9 +26,10 @@ include "nav.php";
        <form METHOD="POST" action="" >
                <div class="form-group row d-flex flex-column align-items-center" id="formulario">
 
-                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="adress" placeholder="Tu direccion" id="adress">
-                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="phone" placeholder="Tu Teléfono" id="phone">
-                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="socialMedia" placeholder="Tu Sitio Web" id="socialMedia">
+                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="name" placeholder="Nombre de la Institución" id="name">
+                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="adress" placeholder="Direccion" id="adress">
+                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="phone" placeholder="Teléfono" id="phone">
+                        <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="socialMedia" placeholder="Sitio Web" id="socialMedia">
 
                         <h2 class="h2 mt-3">Horarios</h2>
                         <select class="form-control  pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" id="dia" name="dia-1">

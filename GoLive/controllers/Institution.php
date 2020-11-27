@@ -11,9 +11,10 @@ class InstitutionController{
             } 
             redireccionar();
             </script>';
-        }else if(isset($_POST["adress"]) && isset($_POST["phone"]) && isset($_POST["socialMedia"]) && isset($_POST["dia-1"]) && isset($_POST["hora-1"]))
+        }else if(isset($_POST["name"]) && isset($_POST["adress"]) && isset($_POST["phone"]) && isset($_POST["socialMedia"]) && isset($_POST["dia-1"]) && isset($_POST["hora-1"]))
         {   
-            if(preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["adress"]) && 
+            if(preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["name"]) && 
+            preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["adress"]) && 
             preg_match('/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/', $_POST["phone"]) && 
             filter_var($_POST["socialMedia"], FILTER_VALIDATE_URL)
             )
@@ -25,6 +26,7 @@ class InstitutionController{
                     $contador ++;
                 }
                 $Data = array(
+                    ':name'=> $_POST['name'],
                     ':adress'=> $_POST['adress'],
                     ':phone' => $_POST['phone'],
                     ':schedule' => $schedule,
@@ -59,6 +61,13 @@ class InstitutionController{
     public function profileController()
     {
         include "views/modules/atlantis/index.php";
+        return '' ; 
+    }
+
+    public function removeInstitution()
+    {
+        $resultado = InstitutionModel::removeInstitution();
+        header("Location: http://localhost/webprogrammingfcefy2020/Golive/");
         return '' ; 
     }
 }

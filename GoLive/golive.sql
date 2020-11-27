@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-11-2020 a las 01:05:01
+-- Tiempo de generación: 27-11-2020 a las 03:56:51
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -104,9 +104,10 @@ CREATE TABLE `inscriptions` (
 
 CREATE TABLE `institutions` (
   `id` int(11) NOT NULL,
+  `name` varchar(250) NOT NULL,
   `adress` varchar(250) NOT NULL,
-  `phone` int(11) NOT NULL,
-  `schedule` datetime NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `schedule` varchar(300) NOT NULL,
   `staff` varchar(250) NOT NULL,
   `socialMedia` varchar(250) NOT NULL,
   `userId` int(11) NOT NULL
@@ -186,7 +187,8 @@ INSERT INTO `users` (`id`, `roleId`, `genderId`, `name`, `lastName`, `phoneNum`,
 (16, 2, 2, 'Ana', 'Carbajo', '2644636436', 'aniic.1701@gmail.com', 'anacarbajo17', '$2a$07$asxx54ahjppf45sd87a5au.oN8fCpmgc3ccW1Tmi2p3jzZrRyqNYi'),
 (17, 2, 1, 'pepito', 'hongito', '2644158762', 'gdfgfd@gmail.com', 'elpepe', '$2a$07$asxx54ahjppf45sd87a5aubCwEL5ItHj/a/0pgDqhsxoGZfT6ANwG'),
 (18, 2, 2, 'lola', 'mento', '2644158762', 'lolamento@gmail.com', 'lolamento', '$2a$07$asxx54ahjppf45sd87a5au4MDyxXUQ/1TR2kvy8yihDSTQWeUs7ZO'),
-(27, 2, 1, 'luis', 'gomez', '2644554665', 'luisgomez2@gmail.com', 'luisgomez', '$2a$07$asxx54ahjppf45sd87a5auAzAgw0JSt092xCmGge/iyNCu8y/LZdS');
+(27, 2, 1, 'luis', 'gomez', '2644554665', 'luisgomez2@gmail.com', 'luisgomez', '$2a$07$asxx54ahjppf45sd87a5auAzAgw0JSt092xCmGge/iyNCu8y/LZdS'),
+(28, 2, 1, 'Jorge', 'Molina', '2644554665', 'jorgemolina@gmail.com', 'jorgemolina10', '$2a$07$asxx54ahjppf45sd87a5au7hrzooxvpV4mcsXC3jAjrM/J/IeMGMy');
 
 --
 -- Índices para tablas volcadas
@@ -304,7 +306,7 @@ ALTER TABLE `inscriptions`
 -- AUTO_INCREMENT de la tabla `institutions`
 --
 ALTER TABLE `institutions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -328,7 +330,7 @@ ALTER TABLE `schedules`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Restricciones para tablas volcadas
