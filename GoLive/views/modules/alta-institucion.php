@@ -58,31 +58,6 @@ include "nav.php";
                           </div>
                         </div>
 
-                        <div class="form-row pt-3 pb-3 pl-0 pr-0 col-lg-8 col-md-10 col-xs-12">
-                          <div class="col">
-
-                            <select class="form-control" id="dia" name="dia-1">
-                                <option value="Lunes">Lunes</option>
-                                <option value="Martes">Martes</option>
-                                <option value="Miercoles">Miércoles</option>
-                                <option value="Jueves">Jueves</option>
-                                <option value="Viernes">Viernes</option>
-                                <option value="Sábado">Sábado</option>
-                            </select>
-
-                          </div>
-                          <div class="col">
-
-                            <input class="form-control pt-3 pb-3" type="time" id="hora-apertura" name="hora-apertura-1">
-
-                          </div>
-                          <div class="col">
-
-                            <input class="form-control pt-3 pb-3" type="time" id="hora-cierre" name="hora-cierre-1">
-
-                          </div>
-                        </div>
-
                         <!--<div class="invalid-feedback">
                           Nombre de usuario no valido :(
                         </div>-->
