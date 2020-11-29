@@ -25,7 +25,18 @@ class UserModel
             $_SESSION["lastName"] = $resultado["lastName"];
             $_SESSION["phoneNum"] = $resultado["phoneNum"];
             $_SESSION["email"] = $resultado["email"];
-		    $_SESSION["username"] = $datosController["usuario"];
+            $_SESSION["username"] = $datosController["usuario"];
+            
+            if($resultado["roleId"] == 3){
+                $sentencia = $conexion->prepare('SELECT * FROM institutions WHERE userId = :id LIMIT 1');
+                $sentencia -> bindParam(":id", $resultado["id"], PDO::PARAM_STR);
+                $sentencia->execute();
+                $resultado = $sentencia->fetch();
+
+                $_SESSION["instId"] = $resultado["id"];
+                $_SESSION["instName"] = $resultado["name"];
+                $_SESSION["adress"] = $resultado["adress"];
+            }
 
             }
             else

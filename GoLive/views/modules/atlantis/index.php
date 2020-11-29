@@ -1112,5 +1112,7 @@
 			</div>
 	</div>
 		<!-- End Custom template -->
+		<div id="preloader"></div>
 </div>
+
 	

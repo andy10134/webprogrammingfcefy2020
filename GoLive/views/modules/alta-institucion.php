@@ -7,7 +7,7 @@ include "nav.php";
 
   <section class="container col-lg-10 col-xs-11 row d-flex p-0">
     <div class="info col-lg-4 col-md-12 text-center d-flex flex-column justify-content-center ">
-      <img src="assets/app/img/imgform.png" class="imgform">
+      <img src="assets/app/img/attachment.png" class="imgform">
       <p class="h3 pt-1 pb-3">
        Actualiza tu cuenta a Institución ;)
       </p>
@@ -220,7 +220,7 @@ body{
 }
 
 .imgform{
-  height: 165px;
+  height: 224px;
   margin-bottom: 22px;
 }
 

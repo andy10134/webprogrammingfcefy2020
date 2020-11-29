@@ -22,7 +22,7 @@ class InstitutionController{
                 $contador = 1;
                 $schedule = '';
                 while(isset($_POST['dia-'.$contador])){
-                    $schedule .= $_POST['dia-'.$contador].' '.$_POST['hora-apertura-'.$contador].' '.$_POST['hora-cierre-'.$contador];
+                    $schedule .= $_POST['dia-'.$contador].' ('.$_POST['hora-apertura-'.$contador].' a '.$_POST['hora-cierre-'.$contador].') ';
                     $contador ++;
                 }
                 $Data = array(
