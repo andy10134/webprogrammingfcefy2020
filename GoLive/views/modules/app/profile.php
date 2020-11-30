@@ -12,11 +12,12 @@ include "views/modules/nav.php";
               </a>
               <?php
               echo('<h1 class="mt-2">'.$_SESSION["name"].' '.$_SESSION["lastName"].'</h1>
-              <p>'.$_SESSION["email"].'</p><p id="id-user" style="display: none;">'.$_SESSION["id"].'</p>');
+                    <p>'.$_SESSION["email"].'</p><p id="id-user" style="display: none;">'.$_SESSION["id"].'</p>');
               
-              
+                UserController::updateRoleIdController();
+                
                 if($_SESSION["roleId"] == 4){
-                echo('<p>ENTRENADOR</p>');  
+                    echo('<p>ENTRENADOR</p>');  
                 }
             ?>
           </div>

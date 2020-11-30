@@ -112,4 +112,12 @@ class UserModel
         $_SESSION["roleId"] = 2;
         return($errores);
     }
+    
+    public function updateRoleIdModel(){
+        $id = $_SESSION["id"];
+        $stmt = Conexion::conectar()->prepare("SELECT  roleId FROM users where id = $id");
+        $stmt->execute();
+        $response = $stmt ->fetch();
+        $_SESSION["roleId"] = $response["roleId"];
+    }
 }

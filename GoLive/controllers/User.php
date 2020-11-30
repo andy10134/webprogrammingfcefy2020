@@ -199,4 +199,8 @@ class UserController
         $response = UserModel::registerUser();
         return '';
     }
+
+    public function updateRoleIdController(){
+        $response = UserModel::updateRoleIdModel();
+    }
 }
