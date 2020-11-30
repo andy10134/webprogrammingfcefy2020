@@ -79,7 +79,7 @@ class UserModel
         return $stmt ->fetch();
     }
 
-    public function validateEmailController($userData){
+    public function validateEmailModel($userData){
         $stmt = Conexion::conectar()-> prepare("SELECT name from users WHERE email = :email");
         $stmt -> execute($userData);
         return $stmt ->fetch();
@@ -94,9 +94,8 @@ class UserModel
         return $stmt ->fetch();
     }
 
-    public function registerTrainner(){
+    public function registerTrainnerModel($id){
         $errores = '';
-        $id = $_SESSION["id"];
         $myInsert = Conexion::conectar()->prepare("UPDATE users SET roleId = 4 where id= $id");
 
         $myInsert->execute();

@@ -210,6 +210,57 @@
 			$(".file-upload").click();
 			});
 			
+					
+		function actualizarEmpl(){
+			<?php
+			$response = UserController::registerTrainnerController();
+			?>
+		}
+
+		
+
+		function actualizarUsuario(){
+			<?php
+			$response = UserController::registerUser();
+			?>
+		}
+
+		$("#trainner-button").click(function (e) { 
+			
+			swal({
+			title: "Bien Hecho",
+			text: "Tu cuenta ha sido actualizada satisfactoriamente",
+			icon: "success",
+			button: "Aww yiss!",
+			}).then(function() {
+			window.location = "http://localhost/webprogrammingfcefy2020/Golive/perfil";
+			});
+		});
+
+		$("#userAccount-button").click(function (e) { 
+			var datos = new FormData();
+			datos.append("userId", <?php echo($_SESSION["id"]) ?>);
+
+			$.ajax({
+				type: "POST",
+				url: "views/modules/ajax.php",
+				data: datos,
+				cache: false,
+				contentType: false,
+				processData: false,
+				success: function (response) {
+					swal({
+						title: "Actualizacion efectuada ;)",
+						text: "Tu cuenta ha sido actualizada satisfactoriamente <br> Preparate para dar clases!",
+						icon: "success",
+						button: "Aww yiss!",
+						}).then(function() {
+						window.location = "http://localhost/webprogrammingfcefy2020/Golive/perfil";
+					});
+				}
+			});
+		});
+
 		});
 	</script>
 

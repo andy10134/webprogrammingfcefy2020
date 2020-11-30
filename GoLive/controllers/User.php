@@ -138,7 +138,7 @@ class UserController
         $dataModel = array(
             ":email" => $data
         );
-        $response = UserModel::validateEmailController($dataModel);
+        $response = UserModel::validateEmailModel($dataModel);
 
         if($response)
         {
@@ -189,9 +189,10 @@ class UserController
         return '';
     }
 
-    public function registerTrainner(){
-        $response = UserModel::registerTrainner();
-        return '';
+    public function registerTrainnerController($id){
+        $response = UserModel::registerTrainnerModel($id);
+
+        return $response;
     }
 
     public function registerUser(){

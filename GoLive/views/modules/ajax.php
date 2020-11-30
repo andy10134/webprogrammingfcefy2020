@@ -16,6 +16,11 @@ class Ajax
     public function emailValidateAjax($data){
         $response = UserController::validateEmailController($data);
     }
+    
+    public function registerTrainnerAjax($id){
+        $response = UserController::registerTrainnerController($id);
+        echo $response;
+    }
 }
 
 $a = new Ajax();
@@ -24,4 +29,6 @@ if(isset($_POST["username"])){
     $a -> usernameValidateAjax($_POST["username"]);
 }else if(isset($_POST["email"])){
     $a -> emailValidateAjax($_POST["email"]);
+}else if(isset($_POST["userId"])){
+    $a -> registerTrainnerAjax($_POST["userId"]);
 }

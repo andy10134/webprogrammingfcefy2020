@@ -12,7 +12,7 @@ include "views/modules/nav.php";
               </a>
               <?php
               echo('<h1 class="mt-2">'.$_SESSION["name"].' '.$_SESSION["lastName"].'</h1>
-              <p>'.$_SESSION["email"].'</p>');
+              <p>'.$_SESSION["email"].'</p><p id="id-user" style="display: none;">'.$_SESSION["id"].'</p>');
               
               
                 if($_SESSION["roleId"] == 4){
@@ -31,9 +31,9 @@ include "views/modules/nav.php";
           <a class="btn btn-outline-dark" href="Alta-Institucion">Cuenta Institución</a>
           <?php
           if($_SESSION["roleId"] != 4){
-            echo('<a class="btn btn-outline-success" onclick="actualizarEmpl()">Cuenta Entrenador</a>');  
+            echo('<a class="btn btn-outline-success" id="trainner-button" >Cuenta Entrenador</a>');  
           }else{
-            echo('<a class="btn btn-outline-success" onclick="actualizarUsuario()">Cuenta Usuario</a>'); 
+            echo('<a class="btn btn-outline-success" id="userAccount-button" >Cuenta Usuario</a>'); 
           }
           ?>
       </div>
@@ -119,34 +119,6 @@ include "views/modules/nav.php";
 <div id="preloader"></div>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
-
-  function actualizarEmpl(){
-    <?php
-    $response = UserController::registerTrainner();
-    ?>
-    swal({
-    title: "Bien Hecho",
-    text: "Tu cuenta ha sido actualizada satisfactoriamente",
-    icon: "success",
-    button: "Aww yiss!",
-    }).then(function() {
-    window.location = "http://localhost/webprogrammingfcefy2020/Golive/perfil";
-    });
-  }
-
-  function actualizarUsuario(){
-    <?php
-    $response = UserController::registerUser();
-    ?>
-    swal({
-    title: "Bien Hecho",
-    text: "Tu cuenta ha sido actualizada satisfactoriamente",
-    icon: "success",
-    button: "Aww yiss!",
-    }).then(function() {
-    window.location = "http://localhost/webprogrammingfcefy2020/Golive/perfil";
-    });
-  }
 
   var frases = [];
   frases.push("Tu eres tu único límite");
