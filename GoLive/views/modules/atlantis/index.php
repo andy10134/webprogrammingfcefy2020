@@ -5,8 +5,8 @@
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="dark2">
 				
-				<a href="index.html" class="logo">
-					<img src="assets/atlantis/img/logo.svg" alt="navbar brand" class="navbar-brand">
+				<a href="index.php" class="logo">
+					<img src="assets/app/img/logo 1.png" alt="navbar brand" class="navbar-brand" style="height: 50px;">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
@@ -174,50 +174,31 @@
 						</li>
 						<li class="nav-item dropdown hidden-caret">
 							<a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
-								<i class="fas fa-layer-group"></i>
+								<i class="fas fa-cog"></i>
 							</a>
 							<div class="dropdown-menu quick-actions quick-actions-info animated fadeIn">
 								<div class="quick-actions-header">
-									<span class="title mb-1">Quick Actions</span>
-									<span class="subtitle op-8">Shortcuts</span>
+									<span class="title mb-1">Configuración</span>
 								</div>
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
 											<a class="col-6 col-md-4 p-0" href="#">
 												<div class="quick-actions-item">
-													<i class="flaticon-file-1"></i>
-													<span class="text">Generated Report</span>
+													<i class="flaticon-user-6"></i>
+													<span class="text">Agregar Entrenador</span>
 												</div>
 											</a>
 											<a class="col-6 col-md-4 p-0" href="#">
 												<div class="quick-actions-item">
-													<i class="flaticon-database"></i>
-													<span class="text">Create New Database</span>
+													<i class="flaticon-settings"></i>
+													<span class="text">Configurar institución</span>
 												</div>
 											</a>
-											<a class="col-6 col-md-4 p-0" href="#">
+											<a class="col-6 col-md-4 p-0" href="eliminarInstitucion">
 												<div class="quick-actions-item">
-													<i class="flaticon-pen"></i>
-													<span class="text">Create New Post</span>
-												</div>
-											</a>
-											<a class="col-6 col-md-4 p-0" href="#">
-												<div class="quick-actions-item">
-													<i class="flaticon-interface-1"></i>
-													<span class="text">Create New Task</span>
-												</div>
-											</a>
-											<a class="col-6 col-md-4 p-0" href="#">
-												<div class="quick-actions-item">
-													<i class="flaticon-list"></i>
-													<span class="text">Completed Tasks</span>
-												</div>
-											</a>
-											<a class="col-6 col-md-4 p-0" href="#">
-												<div class="quick-actions-item">
-													<i class="flaticon-file"></i>
-													<span class="text">Create New Invoice</span>
+													<i class="flaticon-error"></i>
+													<span class="text">Eliminar institución</span>
 												</div>
 											</a>
 										</div>
@@ -225,35 +206,11 @@
 								</div>
 							</div>
 						</li>
+						
 						<li class="nav-item dropdown hidden-caret">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
-								<div class="avatar-sm">
-									<img src="assets/atlantis/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
-								</div>
+							<a class="nav-link"  href="salir" aria-expanded="false">
+								<i class="fas fa-sign-out-alt"></i>
 							</a>
-							<ul class="dropdown-menu dropdown-user animated fadeIn">
-								<div class="dropdown-user-scroll scrollbar-outer">
-									<li>
-										<div class="user-box">
-											<div class="avatar-lg"><img src="assets/atlantis/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
-											<div class="u-text">
-												<h4>Hizrian</h4>
-												<p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">My Profile</a>
-										<a class="dropdown-item" href="#">My Balance</a>
-										<a class="dropdown-item" href="#">Inbox</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Account Setting</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Logout</a>
-									</li>
-								</div>
-							</ul>
 						</li>
 					</ul>
 				</div>
@@ -272,7 +229,7 @@
 						<div class="info">
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									Hizrian
+									<strong><?php echo($_SESSION["username"]);?></strong>
 									<span class="user-level">Administrator</span>
 									<span class="caret"></span>
 								</span>
@@ -282,18 +239,8 @@
 							<div class="collapse in" id="collapseExample">
 								<ul class="nav">
 									<li>
-										<a href="#profile">
-											<span class="link-collapse">My Profile</span>
-										</a>
-									</li>
-									<li>
 										<a href="#edit">
-											<span class="link-collapse">Edit Profile</span>
-										</a>
-									</li>
-									<li>
-										<a href="#settings">
-											<span class="link-collapse">Settings</span>
+											<span class="link-collapse">Configurar perfil</span>
 										</a>
 									</li>
 								</ul>
@@ -557,9 +504,6 @@
 								</ul>
 							</div>
 						</li>
-						<li class="mx-4 mt-2">
-							<a href="http://themekita.com/atlantis-bootstrap-dashboard.html" class="btn btn-primary btn-block"><span class="btn-label mr-2"> <i class="fa fa-heart"></i> </span>Buy Pro</a> 
-						</li>
 					</ul>
 				</div>
 			</div>
@@ -570,7 +514,17 @@
 			<div class="content">
 				<div class="page-inner">
 					<div class="mt-2 mb-4">
-						<h2 class="text-white pb-2">Welcome back, Hizrian!</h2>
+					<?php
+
+						if($_SESSION["genderId"] == 1){
+							$genero = 'Bienvenido';
+							}elseif($_SESSION["genderId"] == 2){
+							$genero = 'Bienvenida';
+							}else{
+							$genero = 'Bienvenide';
+							}
+						echo '<h2 class="text-white pb-2">'.$genero.' '.$_SESSION["name"].' '.$_SESSION["lastName"].'! Administra '.$_SESSION["instName"].' con nosotros.'.'</h2>';
+					?>
 						<h5 class="text-white op-7 mb-4">Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.</h5>
 					</div>
 					<div class="row">
@@ -1158,5 +1112,7 @@
 			</div>
 	</div>
 		<!-- End Custom template -->
+		<div id="preloader"></div>
 </div>
+
 	

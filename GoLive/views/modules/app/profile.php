@@ -10,9 +10,11 @@ include "views/modules/nav.php";
               <a href="#">
                   <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
               </a>
-              <h1 class="mt-2">Camila Smith</h1>
-              <p>deydey@theEmail.com</p>
               <?php
+              echo('<h1 class="mt-2">'.$_SESSION["name"].' '.$_SESSION["lastName"].'</h1>
+              <p>'.$_SESSION["email"].'</p>');
+              
+              
                 if($_SESSION["roleId"] == 4){
                 echo('<p>ENTRENADOR</p>');  
                 }
@@ -20,7 +22,6 @@ include "views/modules/nav.php";
           </div>
 
           <ul class="nav nav-pills nav-stacked row">
-              <li class="active col-12"><a href="#"> <i class="icofont-male"></i>  Perfil </a></li>
               <li class="col-12"><a href="#" > <i class="icofont-contacts"></i> Actividad Reciente  </a></li>
               <li class="col-12"><a href="#" > <i class="icofont-spanner"></i> Editar Perfil </a></li>
           </ul>
@@ -155,10 +156,10 @@ include "views/modules/nav.php";
   var frase = document.getElementById("frase");
   frase.innerHTML = frases[Math.floor(Math.random() * frases.length)];
 
-  var arre = document.getElementsByClassName("get-started-btn");
+  /*var arre = document.getElementsByClassName("get-started-btn");
   for (var el of arre){
       el.style.display = "none";
-  }
+  }*/
 
 </script>
 

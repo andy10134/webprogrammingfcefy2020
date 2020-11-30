@@ -11,7 +11,7 @@
 			<!--Atlantis-->
 			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 			<meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
-			<link rel="icon" href="assets/atlantis/img/icon.ico" type="image/x-icon"/>
+			<link href="assets/app/img/favicon.ico" rel="icon">
 
 			<!-- Fonts and icons -->
 			<script src="assets/atlantis/js/plugin/webfont/webfont.min.js"></script>
@@ -28,7 +28,9 @@
 			<!-- CSS Files -->
 			<link rel="stylesheet" href="assets/atlantis/css/bootstrap.min.css">
 			<link rel="stylesheet" href="assets/atlantis/css/atlantis.min.css">
-
+			
+			<!-- CSS Just for demo purpose, dont include it in your project -->
+			<link rel="stylesheet" href="assets/atlantis/css/demo.css">
 		');
 	}else{
 		echo('
@@ -96,50 +98,81 @@
 
 	$router->add('/webprogrammingfcefy2020/Golive/perfilInstitucion', 'InstitutionController::profileController');
 
+	$router->add('/webprogrammingfcefy2020/Golive/eliminarInstitucion', 'InstitutionController::removeInstitution');
+
 	$router->run();
 
 	if(isset($_SESSION["id"]) && $_SESSION["roleId"] == 3){
 		echo('
 			<!--Atlantis-->
 			<!--   Core JS Files   -->
-	<script src="assets/atlantis/js/core/jquery.3.2.1.min.js"></script>
-	<script src="assets/atlantis/js/core/popper.min.js"></script>
-	<script src="assets/atlantis/js/core/bootstrap.min.js"></script>
+			<script src="assets/atlantis/js/core/jquery.3.2.1.min.js"></script>
+			<script src="assets/atlantis/js/core/popper.min.js"></script>
+			<script src="assets/atlantis/js/core/bootstrap.min.js"></script>
 
-	<!-- jQuery UI -->
-	<script src="assets/atlantis/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	<script src="assets/atlantis/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+			<!-- jQuery UI -->
+			<script src="assets/atlantis/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+			<script src="assets/atlantis/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 
-	<!-- jQuery Scrollbar -->
-	<script src="assets/atlantis/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+			<!-- jQuery Scrollbar -->
+			<script src="assets/atlantis/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
 
-	<!-- Chart JS -->
-	<script src="assets/atlantis/js/plugin/chart.js/chart.min.js"></script>
+			<!-- Chart JS -->
+			<script src="assets/atlantis/js/plugin/chart.js/chart.min.js"></script>
 
-	<!-- jQuery Sparkline -->
-	<script src="assets/atlantis/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+			<!-- jQuery Sparkline -->
+			<script src="assets/atlantis/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
 
-	<!-- Chart Circle -->
-	<script src="assets/atlantis/js/plugin/chart-circle/circles.min.js"></script>
+			<!-- Chart Circle -->
+			<script src="assets/atlantis/js/plugin/chart-circle/circles.min.js"></script>
 
-	<!-- Datatables -->
-	<script src="assets/atlantis/js/plugin/datatables/datatables.min.js"></script>
+			<!-- Datatables -->
+			<script src="assets/atlantis/js/plugin/datatables/datatables.min.js"></script>
 
-	<!-- Bootstrap Notify -->
-	<script src="assets/atlantis/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+			<!-- Bootstrap Notify -->
+			<script src="assets/atlantis/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
 
-	<!-- jQuery Vector Maps -->
-	<script src="assets/atlantis/js/plugin/jqvmap/jquery.vmap.min.js"></script>
-	<script src="assets/atlantis/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+			<!-- jQuery Vector Maps -->
+			<script src="assets/atlantis/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+			<script src="assets/atlantis/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
 
-	<!-- Sweet Alert -->
-	<script src="assets/atlantis/js/plugin/sweetalert/sweetalert.min.js"></script>
+			<!-- Sweet Alert -->
+			<script src="assets/atlantis/js/plugin/sweetalert/sweetalert.min.js"></script>
 
-	<!-- Atlantis JS -->
-	<script src="assets/atlantis/js/atlantis.min.js"></script>
+			<!-- Atlantis JS -->
+			<script src="assets/atlantis/js/atlantis.min.js"></script>
 
-			
+			<!-- Atlantis DEMO methods, dont include it in your project! -->
+			<script src="assets/atlantis/js/setting-demo.js"></script>
+			<script src="assets/atlantis/js/demo.js"></script>
+			<script>
+				$("#lineChart").sparkline([102,109,120,99,110,105,115], {
+					type: "line",
+					height: "70",
+					width: "100%",
+					lineWidth: "2",
+					lineColor: "rgba(255, 255, 255, .5)",
+					fillColor: "rgba(255, 255, 255, .15)"
+				});
+
+				$("#lineChart2").sparkline([99,125,122,105,110,124,115], {
+					type: "line",
+					height: "70",
+					width: "100%",
+					lineWidth: "2",
+					lineColor: "rgba(255, 255, 255, .5)",
+					fillColor: "rgba(255, 255, 255, .15)"
+				});
+
+				$("#lineChart3").sparkline([105,103,123,100,95,105,115], {
+					type: "line",
+					height: "70",
+					width: "100%",
+					lineWidth: "2",
+					lineColor: "rgba(255, 255, 255, .5)",
+					fillColor: "rgba(255, 255, 255, .15)"
+				});
 
 
 		');
