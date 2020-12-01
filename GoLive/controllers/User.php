@@ -195,8 +195,8 @@ class UserController
         return $response;
     }
 
-    public function registerUser(){
-        $response = UserModel::registerUser();
+    public function registerUserController($id){
+        $response = UserModel::registerUserModel($id);
         return '';
     }
 

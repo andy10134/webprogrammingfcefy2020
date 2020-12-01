@@ -94,6 +94,7 @@ class UserModel
         return $stmt ->fetch();
     }
 
+    //Considerar utilizar una funcion que recibe el rol y el id del usuario
     public function registerTrainnerModel($id){
         $errores = '';
         $myInsert = Conexion::conectar()->prepare("UPDATE users SET roleId = 4 where id= $id");
@@ -102,10 +103,10 @@ class UserModel
         $_SESSION["roleId"] = 4;
         return($errores);
     }
-
-    public function registerUser(){
+    
+    //Considerar utilizar una funcion que recibe el rol y el id del usuario
+    public function registerUserModel($id){
         $errores = '';
-        $id = $_SESSION["id"];
         $myInsert = Conexion::conectar()->prepare("UPDATE users SET roleId = 2 where id= $id");
 
         $myInsert->execute();
