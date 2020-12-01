@@ -36,7 +36,7 @@ include "nav.php";
           <div class="form-row pt-3 pb-3 pl-0 pr-0 col-lg-8 col-md-10 col-xs-12" id="input-time">
             <div class="col">
 
-              <select class="form-control" id="dia" name="dia-1">
+              <select class="form-control s1" id="dia" name="dia-1">
                 <option value="Lunes">Lunes</option>
                 <option value="Martes">Martes</option>
                 <option value="Miercoles">Miércoles</option>
@@ -48,12 +48,12 @@ include "nav.php";
             </div>
             <div class="col">
 
-              <input class="form-control pt-3 pb-3" type="time" id="hora-apertura" name="hora-apertura-1">
+              <input class="form-control pt-3 pb-3 1p" type="time" id="hora-apertura-1" name="hora-apertura-1">
 
             </div>
             <div class="col">
 
-              <input class="form-control pt-3 pb-3" type="time" id="hora-cierre" name="hora-cierre-1">
+              <input class="form-control pt-3 pb-3 2p" type="time" id="hora-cierre-1" name="hora-cierre-1">
 
             </div>
           </div>
