@@ -3,12 +3,21 @@ var count = 1;
 $("#add_button").click(function (e) {
     var nuevoInput = $(this).prev().clone();
 
+    //Definir funcion de callback
     count = count + 1;
-    var time = nuevoInput.find("#dia").attr("name").split("-");
-    nuevoInput.attr("name", time[0] + "-" + count);
-    nuevoInput.attr("id", time[0] + "-" + count);
 
-    console.log(count);
+    time = nuevoInput.find(".s1").attr("name").split("-");
+
+    nuevoInput.find(".s1").attr("name", time[0] + "-" + count);
+    nuevoInput.find(".s1").attr("id", time[0] + "-" + count);
+    
+    time = nuevoInput.find(".1p").attr("name").split("-");
+    nuevoInput.find(".1p").attr("name", time[0] + "-" + time[1] + "-" + count);
+    nuevoInput.find(".1p").attr("id", time[0] + "-" + time[1] + "-" + count);
+
+    time = nuevoInput.find(".2p").attr("name").split("-");
+    nuevoInput.find(".2p").attr("name", time[0] + "-" + time[1] + "-" + count);
+    nuevoInput.find(".2p").attr("id", time[0] + "-" + time[1] + "-" + count);
 
     nuevoInput.insertBefore("#add_button");
 
@@ -26,7 +35,6 @@ var readURL = function (input) {
     }
 }
 
-
 $(".file-upload").on("change", function () {
     readURL(this);
 });
@@ -34,7 +42,6 @@ $(".file-upload").on("change", function () {
 $(".upload-button").on("click", function () {
     $(".file-upload").click();
 });
-
 
 //MODAL DE ACTUALIZACION DE TIPO DE USUARIO
 
@@ -61,14 +68,26 @@ $("#trainner-button").click(function (e) {
     });
 });
 
-
 $("#userAccount-button").click(function (e) {
-    swal({
-        title: "Bien Hecho",
-        text: "Tu cuenta ha sido actualizada satisfactoriamente",
-        icon: "success",
-        button: "Aww yiss!",
-    }).then(function () {
-        window.location = "http://localhost/webprogrammingfcefy2020/Golive/perfil";
+    var datos = new FormData();
+    datos.append("userIdA", $("#id-user").text());
+
+    $.ajax({
+        type: "POST",
+        url: "views/modules/ajax.php",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+            swal({
+                title: "Actualizacion efectuada :)",
+                text: "Tu cuenta ha sido actualizada satisfactoriamente",
+                icon: "success",
+                button: "Aceptar",
+            }).then(function () {
+                window.location = "http://localhost/webprogrammingfcefy2020/Golive/perfil";
+            });
+        }
     });
 });
