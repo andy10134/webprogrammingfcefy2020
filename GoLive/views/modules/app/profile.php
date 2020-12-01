@@ -14,7 +14,7 @@ include "views/modules/nav.php";
               echo('<h1 class="mt-2">'.$_SESSION["name"].' '.$_SESSION["lastName"].'</h1>
                     <p>'.$_SESSION["email"].'</p><p id="id-user" style="display: none;">'.$_SESSION["id"].'</p>');
               
-                UserController::updateRoleIdController();
+                    UserController::updateRoleIdController();
                 
                 if($_SESSION["roleId"] == 4){
                     echo('<p>ENTRENADOR</p>');  
@@ -569,7 +569,4 @@ ul.summary-list > li:last-child  {
 .container{
   padding-bottom: 3%;
 }
-
-
-
 </style>
