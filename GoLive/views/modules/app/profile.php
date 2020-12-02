@@ -22,10 +22,16 @@ include "views/modules/nav.php";
             ?>
           </div>
 
-          <ul class="nav nav-pills nav-stacked row">
-              <li class="col-12"><a href="#" > <i class="icofont-contacts"></i> Actividad Reciente  </a></li>
-              <li class="col-12"><a href="#" > <i class="icofont-spanner"></i> Editar Perfil </a></li>
-          </ul>
+          <div class="nav nav-pills nav-stacked row cont list-group cont" id="list-tab" role="tablist">
+          <a class="elem  active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><i class="icofont-contacts"></i> Actividad Reciente</a>
+          <a class="elem " id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><i class="icofont-spanner"></i> Editar Perfil </a>
+        
+        </div>
+
+     
+
+
+
       </div>
       <div class="alta-gym">
         <p class="h5">Actualiza tu cuenta</p>
@@ -50,8 +56,13 @@ include "views/modules/nav.php";
           </div>
           
       </div>
+     
 
-      <div class="schedules">
+      
+
+      <div class="tab-content" id="nav-tabContent">
+
+       <div class="schedules tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
           <div class="h3 text-center">Tus Horarios</div>
           <div class="row">
               <div class="col-md-6">
@@ -110,11 +121,60 @@ include "views/modules/nav.php";
                       </div>
                   </div>
               </div>
-          </div>
+          </div></div>
+
+
+    <div class="info d-flex justify-content-center row fade tab-pane" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+
+      <form class="form-inline col-12 d-flex justify-content-center mb-4">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Nombre">
       </div>
+      <div class="form-group mx-sm-3 mb-2 ">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+      <button type="submit" class="btn btn-dark mb-2">Confirmar</button>
+</form>
+
+      <form class="form-inline col-12 d-flex justify-content-center mb-4">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Email">
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+      <button type="submit" class="btn btn-dark mb-2">Confirmar</button>
+     </form>
+
+      <form class="form-inline col-12 d-flex justify-content-center mb-4">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Email</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Telefono">
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Password</label>
+        <input type="password" class="form-control" id="inputPassword2" placeholder="">
+      </div>
+      <button type="submit" class="btn btn-dark mb-2">Confirmar</button>
+
+
+
+    </form>
+    </div>
+      
+
+      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita fuga dignissimos mollitia quia iste cupiditate veritatis, fugit obcaecati ut voluptatem repellendus. Quas consequatur mollitia, quo eos debitis unde reiciendis, a.</div>
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, harum eius, nihil rerum, magnam consequatur libero modi sapiente maxime, inventore voluptatum at ipsum vitae error rem reiciendis dolorem neque repellat.</div>
+    </div>
+
   </div>
 </div>
 </div>
+
 
 
 <div id="preloader"></div>
@@ -129,10 +189,7 @@ include "views/modules/nav.php";
   var frase = document.getElementById("frase");
   frase.innerHTML = frases[Math.floor(Math.random() * frases.length)];
 
-  /*var arre = document.getElementsByClassName("get-started-btn");
-  for (var el of arre){
-      el.style.display = "none";
-  }*/
+
 
 </script>
 
@@ -204,39 +261,38 @@ i{
     font-size: 12px;
 }
 
-.profile-nav ul {
+.profile-nav .cont {
     margin-top: 1px;
 }
 
-.profile-nav ul > li {
+.profile-nav .cont > .elem {
     border-bottom: 1px solid #ebeae6;
     margin-top: 0;
 
     line-height: 30px;
 }
 
-.profile-nav ul > li:last-child {
+.profile-nav .cont > .elem:last-child {
     border-bottom: none;
 }
 
-.profile-nav ul > li > a {
+.profile-nav .cont > .elem  {
     border-radius: 0;
     -webkit-border-radius: 0;
     color: #f9f8ff;
-    border-left: 5px solid #fff;
 }
 
-.profile-nav ul > li > a:hover, .profile-nav ul > li > a:focus, .profile-nav ul li.active  a {
+.profile-nav .cont > .elem:hover, .profile-nav .cont > .elem > a:focus, .profile-nav .cont .elem.active  a {
 
     color: #f8f9ff im !important;
 }
 
-.profile-nav ul > li:last-child > a:last-child {
+.profile-nav .cont > .elem:last-child  {
     border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
 }
 
-.profile-nav ul > li > a > i{
+.profile-nav .cont > .elem > i{
     font-size: 16px;
     padding-right: 10px;
     color: #bcb3aa;
@@ -569,4 +625,14 @@ ul.summary-list > li:last-child  {
 .container{
   padding-bottom: 3%;
 }
+
+
+.form-control-plaintext {
+  color:#f8f9ff ;
+}
+
+.info{
+  padding:10%;
+}
+
 </style>
