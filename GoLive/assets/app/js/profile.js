@@ -82,7 +82,7 @@ $("#userAccount-button").click(function (e) {
         success: function (response) {
             swal({
                 title: "Actualizacion efectuada :)",
-                text: "Tu cuenta ha sido actualizada satisfactoriamente",
+                text: "Tu cuenta ha sido actualizada satisfactoriamente  Asegurate de inscribirte en clases!",
                 icon: "success",
                 button: "Aceptar",
             }).then(function () {

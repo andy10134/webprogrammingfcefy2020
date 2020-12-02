@@ -4,7 +4,7 @@ include "views/modules/nav.php";
 
 <div class="container bootstrap snippets bootdey">
 <div class="row"  style="margin-top:90px;">
-  <div class="profile-nav col-md-3">
+  <div class="profile-nav col-md-4">
       <div class="panel">
           <div class="user-heading round">
               <a href="#">
@@ -24,7 +24,7 @@ include "views/modules/nav.php";
 
           <div class="nav nav-pills nav-stacked row cont list-group cont" id="list-tab" role="tablist">
           <a class="elem  active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><i class="icofont-contacts"></i> Actividad Reciente</a>
-          <a class="elem " id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><i class="icofont-spanner"></i> Editar Perfil </a>
+          <a class="elem " id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><i class="icofont-spanner"></i>Ajustes de cuenta</a>
         
         </div>
 
@@ -34,18 +34,17 @@ include "views/modules/nav.php";
 
       </div>
       <div class="alta-gym">
-        <p class="h5">Actualiza tu cuenta</p>
-          <a class="btn btn-outline-dark" href="Alta-Institucion">Cuenta Institución</a>
+        <a class="btn btn-outline-dark" href="Alta-Institucion"><i class="icofont-gym-alt-3"></i> Registra tu Institución</a>
           <?php
           if($_SESSION["roleId"] != 4){
-            echo('<a class="btn btn-outline-success" id="trainner-button" >Cuenta Entrenador</a>');  
+            echo('<a class="btn btn-outline-success" id="trainner-button" style="min-width: 218.96px;" > <i class="icofont-whistle-alt"></i> Cuenta Entrenador</a>');  
           }else{
-            echo('<a class="btn btn-outline-success" id="userAccount-button" >Cuenta Usuario</a>'); 
+            echo('<a class="btn btn-outline-success" id="userAccount-button"  style="min-width: 218.96px;"><i class="icofont-runner-alt-1"></i> Ya no soy entrenador</a>'); 
           }
           ?>
       </div>
   </div>
-  <div class="profile-info col-md-9">
+  <div class="profile-info col-md-8">
       
       
 
@@ -125,7 +124,7 @@ include "views/modules/nav.php";
 
 
     <div class="info d-flex justify-content-center row fade tab-pane" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-      <h3 class="mb-5 text-white col-10 p-0">Editar Perfil</h2>
+      <h3 class="mb-5 text-white col-10 p-0">Ajustes de cuenta</h2>
       <form class="form-inline col-12 d-flex justify-content-center mb-4">
       <div class="form-group mb-2">
         <label for="staticEmail2" class="sr-only">Email</label>

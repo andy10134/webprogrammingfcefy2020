@@ -28,7 +28,7 @@ include "nav.php";
 
           <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="name" placeholder="Nombre de la Institución" id="name">
           <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="adress" placeholder="Direccion" id="adress">
-          <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="phone" placeholder="Teléfono" id="phone">
+          <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="phone" placeholder="Teléfono" id="phoneNum">
           <input required class="form-control mt-3 pt-3 pb-3 pl-4 pr-4 col-lg-8 col-md-10 col-xs-12" type="text" name="socialMedia" placeholder="Sitio Web" id="socialMedia">
 
           <h2 class="h2 mt-3">Horarios</h2>
