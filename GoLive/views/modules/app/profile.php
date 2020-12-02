@@ -125,7 +125,7 @@ include "views/modules/nav.php";
 
 
     <div class="info d-flex justify-content-center row fade tab-pane" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-
+      <h3 class="mb-5 text-white col-10 p-0">Editar Perfil</h2>
       <form class="form-inline col-12 d-flex justify-content-center mb-4">
       <div class="form-group mb-2">
         <label for="staticEmail2" class="sr-only">Email</label>
