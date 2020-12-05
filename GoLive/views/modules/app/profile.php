@@ -59,7 +59,7 @@ include "views/modules/nav.php";
 
       
 
-      <div class="tab-content" id="nav-tabContent">
+      <div class="tab-content mt-5" id="nav-tabContent">
 
        <div class="schedules tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
           <div class="h3 text-center">Tus Horarios</div>
@@ -123,8 +123,8 @@ include "views/modules/nav.php";
           </div></div>
 
 
-    <div class="info d-flex justify-content-center row fade tab-pane" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-      <h3 class="mb-5 text-white col-10 p-0">Ajustes de cuenta</h2>
+    <div class="info justify-content-center row fade tab-pane ml-1" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+      <h3 class=" text-white text-center col-10 p-0 mb-5">Ajustes de cuenta</h2>
       <form class="form-inline col-12 d-flex justify-content-center mb-4">
       <div class="form-group mb-2">
         <label for="staticEmail2" class="sr-only">Email</label>
@@ -201,15 +201,15 @@ include "views/modules/nav.php";
 
 <style type="text/css">
   body {
-    color: #797979;
-    background: linear-gradient(45deg, rgba(11, 0, 80, 0.9) 0%, rgba(4, 210, 115, 0.9) 80%), url("./././assets/app/img/SimpleShiny.png") center repeat ;;
-    font-family: 'Poppins', sans-serif;
-    padding: 0px !important;
-    margin: 0px !important;
-    font-size: 13px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    background: linear-gradient(45deg, rgba(11, 0, 80, 0.9) 0%, rgba(4, 210, 115, 0.9) 80%), url("./././assets/app/img/SimpleShiny.png") center repeat ;;
+    color: #797979;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin: 0px !important;
+    padding: 0px !important;
+    text-rendering: optimizeLegibility;
 }
 
 i{
@@ -221,8 +221,8 @@ i{
 }
 
 .panel-body{
-  color: #d9534f;
   background: #f9fbff;
+  color: #d9534f;
   margin-top: 3%;
 }
 
@@ -231,9 +231,9 @@ i{
 }
 
 .profile-nav .user-heading {
-    color: #fff;
-    border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    color: #fff;
     padding: 30px;
     text-align: center;
 }
@@ -244,10 +244,10 @@ i{
 }
 
 .profile-nav .user-heading a img {
-    width: 112px;
-    height: 112px;
-    border-radius: 50%;
     -webkit-border-radius: 50%;
+    border-radius: 50%;
+    height: 112px;
+    width: 112px;
 }
 
 .profile-nav .user-heading h1 {
@@ -265,10 +265,10 @@ i{
 }
 
 .profile-nav .cont > .elem {
-    border-bottom: 1px solid #ebeae6;
-    margin-top: 0;
 
+    border-bottom: 1px solid #ebeae6;
     line-height: 30px;
+    margin-top: 0;
 }
 
 .profile-nav .cont > .elem:last-child {
@@ -276,8 +276,8 @@ i{
 }
 
 .profile-nav .cont > .elem  {
-    border-radius: 0;
     -webkit-border-radius: 0;
+    border-radius: 0;
     color: #f9f8ff;
 }
 
@@ -292,29 +292,29 @@ i{
 }
 
 .profile-nav .cont > .elem > i{
+    color: #bcb3aa;
     font-size: 16px;
     padding-right: 10px;
-    color: #bcb3aa;
 }
 
 .r-activity {
-    margin: 6px 0 0;
     font-size: 12px;
+    margin: 6px 0 0;
 }
 
 
 .p-text-area, .p-text-area:focus {
     border: none;
-    font-weight: 300;
     box-shadow: none;
     color: #c3c3c3;
     font-size: 16px;
+    font-weight: 300;
 }
 
 .profile-info .panel-footer {
-    width: fit-content;
     background-color:#f8f7f5 ;
     border-top: 1px solid #e7ebee;
+    width: fit-content;
 }
 
 .profile-info .panel-footer ul li a {
@@ -322,10 +322,10 @@ i{
 }
 
 .alta-gym{
+  color:#f9f8ff;
+  margin-top: 2vh;
   padding: 10% 5%;
   text-align: center; 
-  margin-top: 2vh;
-  color:#f9f8ff;
 }
 
 
@@ -346,10 +346,10 @@ i{
     color: #fff;
     text-align: center;
     font-style: italic;
-    padding: 40px 110px;
-    border-radius: 4px 4px 0 0;
-    -webkit-border-radius: 4px 4px 0 0;
-    font-size: 16px;
+    padding: 20px 55px;
+    background: rgba(7, 4, 41, .7);
+    border-radius: 10px;
+    font-size: 23px;
     font-weight: 300;
 }
 
@@ -594,8 +594,8 @@ ul.summary-list > li:last-child  {
     border-top: 8px solid transparent;
     display: block;
     height: 0;
-    right: -7px;
     position: absolute;
+    right: -7px;
     top: 13px;
     width: 0;
 }
@@ -613,8 +613,10 @@ ul.summary-list > li:last-child  {
     margin-right: 0px;
 }
 
-.schedules{
-  margin: 5% 0;
+.schedules, .info{
+  background: rgba(7, 4, 41, .7);;
+  border: 1px solid #070429;
+  padding: 5% 0;
 }
 
 .schedules .h3{
@@ -622,7 +624,7 @@ ul.summary-list > li:last-child  {
 }
 
 .container{
-  padding-bottom: 3%;
+  padding-bottom: 6%;
 }
 
 
@@ -630,8 +632,5 @@ ul.summary-list > li:last-child  {
   color:#f8f9ff ;
 }
 
-.info{
-  padding:10%;
-}
 
 </style>
