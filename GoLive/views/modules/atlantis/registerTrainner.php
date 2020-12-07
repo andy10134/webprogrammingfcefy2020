@@ -521,9 +521,6 @@
 					?>
 					</div>
 				</div>
-				<!-- <div class="">
-					<img src="assets/atlantis/img/register3.jpg" alt="Responsive image" class="rounded mx-auto d-block" style="width: 100%; height: 300px;">
-				</div> -->
 			</div>
 		</div>
 </div>
