@@ -5,7 +5,7 @@
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="dark2">
 				
-				<a href="index.php" class="logo">
+				<a href="perfilInstitucion" class="logo">
 					<img src="assets/app/img/logo 1.png" alt="navbar brand" class="navbar-brand" style="height: 50px;">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">

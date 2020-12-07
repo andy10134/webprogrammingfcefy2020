@@ -47,4 +47,42 @@ class InstitutionModel{
 
         return($errores);
     }
+
+    public function registerTrainner($Data)
+    {
+        $errores = '';
+
+        $id = array(
+            ':instId' => $_SESSION["instId"]
+        );
+
+        $stmt=Conexion::conectar()->prepare('SELECT staff FROM institutions WHERE id = :instId LIMIT 1');
+        $stmt->execute($id);
+        $resultado = $stmt->fetch();
+
+        if($resultado["staff"] == NULL){
+
+            $IDs = array(
+            ':idEntrenador' => $Data["id"],
+            ':instId' => $_SESSION["instId"]
+            );
+
+            $myInsert = Conexion::conectar()->prepare("UPDATE institutions SET staff = :idEntrenador where id = :instId");
+            $myInsert->execute($IDs);
+
+        }else
+        {
+            $staff = $resultado["staff"].'/'.$Data["id"];
+
+            $IDs = array(
+                ':staff' => $staff,
+                ':instId' => $_SESSION["instId"]
+            );
+
+            $myInsert = Conexion::conectar()->prepare("UPDATE institutions SET staff = :staff where id = :instId");
+            $myInsert->execute($IDs);
+
+        }
+        return($errores);
+    }
 }

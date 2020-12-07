@@ -5,7 +5,7 @@
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="dark2">
 				
-				<a href="index.php" class="logo">
+				<a href="perfilInstitucion" class="logo">
 					<img src="assets/app/img/logo 1.png" alt="navbar brand" class="navbar-brand" style="height: 50px;">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -532,8 +532,7 @@
 								<div class="collapse" id="search-nav">
 									<form class="navbar-left navbar-form nav-search mr-md-3">
 										<div class="input-group">
-											<i class="fa fa-search search-icon mt-2 mr-2" style="font-size: 25px;"></i>
-											<input type="text" placeholder="Search ..." class="form-control">
+											<input type="text" placeholder="Search ..." class="form-control"><i class="fa fa-search search-icon mt-2 ml-2" style="font-size: 25px;"></i>
 										</div>
 									</form>
 								</div>

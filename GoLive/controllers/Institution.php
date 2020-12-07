@@ -36,7 +36,6 @@ class InstitutionController{
                     ':userId' => $_SESSION['id']
                 );
 
-                var_dump($Data);
                 $resultado = InstitutionModel::alta($Data);
                 
                 if($resultado == '')
@@ -81,45 +80,25 @@ class InstitutionController{
             } 
             redireccionar();
             </script>';
-        }else if(isset($_POST["name"]) && isset($_POST["adress"]) && isset($_POST["phone"]) && isset($_POST["socialMedia"]) && isset($_POST["dia-1"]) && isset($_POST["hora-apertura-1"]) && isset($_POST["hora-cierre-1"]))
+        }else if(isset($_POST["id"]))
         {   
-            
-            // if(preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["name"]) && 
-            // preg_match('/^[a-zA-Z0-9\s]+$/', $_POST["adress"]) && 
-            // preg_match('/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/', $_POST["phone"]) && 
-            // filter_var($_POST["socialMedia"], FILTER_VALIDATE_URL)
-            // )
-            // {
-            //     $contador = 1;
-            //     $schedule = '';
-            //     while(isset($_POST['dia-'.$contador])){
-            //         $schedule .= $_POST['dia-'.$contador].' ('.$_POST['hora-apertura-'.$contador].' a '.$_POST['hora-cierre-'.$contador].') ';
-            //         $contador ++;
-            //     }
-            //     $Data = array(
-            //         ':name'=> $_POST['name'],
-            //         ':adress'=> $_POST['adress'],
-            //         ':phone' => $_POST['phone'],
-            //         ':schedule' => $schedule,
-            //         ':staff' => '',
-            //         ':socialMedia' => $_POST['socialMedia'],
-            //         ':userId' => $_SESSION['id']
-            //     );
+            $Data = array(
+                ':id'=> $_POST['id'],
+            );
 
-            //     var_dump($Data);
-            //     $resultado = InstitutionModel::alta($Data);
+            $resultado = InstitutionModel::registerTrainner($Data);
                 
-            //     if($resultado == '')
-            //     {
-            //         header("Location: http://localhost/webprogrammingfcefy2020/Golive/perfilInstitucion");
-            //     }
-            //     else
-            //     {
-            //         echo '<div class="alert alert-danger">Error al ingresar los datos, intente otra vez.</div>';
-            //     }
-            //     unset($_POST);
+            if($resultado == '')
+            {
+                echo '<div class="alert alert-success">Se registro al entrenador correctamente!</div>';
+                //header("Location: http://localhost/webprogrammingfcefy2020/Golive/perfilInstitucion");
+            }
+            else
+            {
+                echo '<div class="alert alert-danger">Error al ingresar los datos, intente otra vez.</div>';
+            }
+            unset($_POST);
                 
-            // }
         }
         else
         {
