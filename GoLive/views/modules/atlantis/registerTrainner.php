@@ -514,11 +514,35 @@
 			<div class="content" style="background-image: linear-gradient(rgba(25, 32, 53, 0.8), rgba(26, 32, 53, 0.5)), url('assets/atlantis/img/prueba.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 100vh;">
 				<div class="page-inner">
 					<div class="mt-2 mb-4">
-					<?php
-						echo '<h2 class="text-white pb-2">Administra '.$_SESSION["instName"].' con nosotros.'.'</h2>
-						<h5 class="text-white op-7 mb-4">Busca el nombre de usuario del entrenador. Cuando lo encuentres, seleccionalo y listo! Ya formará parte de '.$_SESSION["instName"].'!'.'</h5>
-						';
-					?>
+					<div class="card">
+						<div class="card-header">
+						<h4 class="card-title">Panel de administración de entrenadores de <?php echo $_SESSION["instName"];?></h4>
+						</div>
+						<div class="card-body">
+						<h5 class="text-white op-7 mb-4">Aquí podras administrar toda la información de tus entrenadores de <?php echo $_SESSION["instName"]?>.</h5>
+						</div>
+						
+					</div>
+					<div class="card">
+						<div class="card-header">
+						<h4 class="card-title">Agregar nuevo entrenador</h4>
+						</div>
+						<div class="card-body">
+							<form action="">
+								<div class="collapse" id="search-nav">
+									<form class="navbar-left navbar-form nav-search mr-md-3">
+										<div class="input-group">
+											<i class="fa fa-search search-icon mt-2 mr-2" style="font-size: 25px;"></i>
+											<input type="text" placeholder="Search ..." class="form-control">
+										</div>
+									</form>
+								</div>
+								<button class="btn mt-3" style="background-color: #ffffff; color:rgba(25, 32, 53, 1);">Confirmar</button>
+						</form>
+						</div>
+						
+					</div>
+					
 					</div>
 				</div>
 			</div>
