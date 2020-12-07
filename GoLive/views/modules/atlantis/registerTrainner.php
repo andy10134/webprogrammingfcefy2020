@@ -511,7 +511,7 @@
 		<!-- End Sidebar -->
 
 		<div class="main-panel">
-			<div class="content" style="background-image: linear-gradient(rgba(25, 32, 53, 0.8), rgba(26, 32, 53, 0.5)), url('assets/atlantis/img/prueba.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 100vh;">
+			<div class="content" style="background-image: linear-gradient(rgba(25, 32, 53, 0.8), rgba(26, 32, 53, 0.5)), url('assets/atlantis/img/prueba.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; background-attachment: fixed; height:100vh;">
 				<div class="page-inner">
 					<div class="mt-2 mb-4">
 					<div class="card">
