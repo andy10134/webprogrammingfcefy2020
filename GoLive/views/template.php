@@ -99,6 +99,8 @@
 
 	$router->add('/webprogrammingfcefy2020/Golive/eliminarInstitucion', 'InstitutionController::removeInstitution');
 
+	$router->add('/webprogrammingfcefy2020/Golive/agregarEntrenador', 'InstitutionController::registerTrainner');
+
 	$router->run();
 
 	if(isset($_SESSION["id"]) && $_SESSION["roleId"] == 3){

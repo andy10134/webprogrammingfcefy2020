@@ -183,7 +183,7 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="#">
+											<a class="col-6 col-md-4 p-0" href="agregarEntrenador">
 												<div class="quick-actions-item">
 													<i class="flaticon-user-6"></i>
 													<span class="text">Agregar Entrenador</span>
