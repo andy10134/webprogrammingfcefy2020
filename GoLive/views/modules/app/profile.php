@@ -25,7 +25,8 @@ include "views/modules/nav.php";
           <div class="nav nav-pills nav-stacked row cont list-group cont" id="list-tab" role="tablist">
           <a class="elem  active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><i class="icofont-contacts"></i> Actividad Reciente</a>
           <a class="elem " id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><i class="icofont-spanner"></i>Ajustes de cuenta</a>
-        
+          <a class="elem " id="list-profile-list" data-toggle="list" href="#list-pay" role="tab" aria-controls="profile"><i class="icofont-card"></i>Ajustes de Pago</a>
+          <a class="elem " href="http://localhost/webprogrammingfcefy2020/Golive/facturacion"><i class="icofont-label"></i>Ajustes de Facturación</a>
         </div>
 
      
@@ -124,7 +125,7 @@ include "views/modules/nav.php";
 
 
     <div class="info justify-content-center row fade tab-pane ml-1" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-      <h3 class=" text-white text-center col-10 p-0 mb-5">Ajustes de cuenta</h2>
+      <h3 class=" text-white text-center col-10 p-0 mb-5">Ajustes de cuenta</h3>
       <form class="form-inline col-12 d-flex justify-content-center mb-4">
       <div class="form-group mb-2">
         <label for="staticEmail2" class="sr-only">Email</label>
@@ -164,6 +165,32 @@ include "views/modules/nav.php";
 
     </form>
     </div>
+    <div class="info justify-content-center row fade tab-pane ml-1 pl-3 pr-3" id="list-pay" role="tabpanel" aria-labelledby="list-profile-list">
+        <div class="h4 pb-2 text-center">Información de Facturación</div>
+        <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Mes</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Mayo</td>
+        <td>$56565</td>
+      </tr>
+      <tr>
+        <td>Febrero</td>
+        <td>$5656</td>
+      </tr>
+
+        </tbody>
+      </table>
+        <div class="h5 text-right w-100">Total a pagar: $</div>
+        <div class="w-100 d-flex justify-content-end">
+        <a class="btn btn-outline-info " id="pagar" style="min-width: 218.96px;" > <i class="icofont-whistle-alt"></i> Pagar</a>
+        </div>
+    </div>
       
 
       <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita fuga dignissimos mollitia quia iste cupiditate veritatis, fugit obcaecati ut voluptatem repellendus. Quas consequatur mollitia, quo eos debitis unde reiciendis, a.</div>
@@ -184,6 +211,11 @@ include "views/modules/nav.php";
   frases.push("Tu eres tu único límite");
   frases.push("No pares cuando estés cansado, detente cuando hayas terminado");
   frases.push("Limpia tu mente del no puedo");
+  frases.push("Soy más fuerte que las excusas");
+  frases.push("No exiaste camino fácil, sólo trabajo duro y, sobre todo, constante");
+  frases.push("El sacrificio de hoy será la fuerza de mañana");
+  frases.push("Hoy voy a conseguir todo lo que me proponga");
+  frases.push("El cuerpo consigue lo que la mente cree");
 
   var frase = document.getElementById("frase");
   frase.innerHTML = frases[Math.floor(Math.random() * frases.length)];
@@ -283,7 +315,7 @@ i{
 
 .profile-nav .cont > .elem:hover, .profile-nav .cont > .elem > a:focus, .profile-nav .cont .elem.active  a {
 
-    color: #f8f9ff im !important;
+    color: #f8f9ff !important;
 }
 
 .profile-nav .cont > .elem:last-child  {
@@ -632,5 +664,12 @@ ul.summary-list > li:last-child  {
   color:#f8f9ff ;
 }
 
+#list-pay .table, #list-pay .h5, #list-pay .h4{
+  color: #fff !important;
+}
+
+#pagar{
+  color:#fff;
+}
 
 </style>

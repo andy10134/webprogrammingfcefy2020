@@ -116,6 +116,11 @@ class UserController
         return '' ; 
     }
 
+    public function facturacion(){
+        include 'views/modules/app/facturacion.php';
+        return '';
+    }
+
     public function validateUsernameController($data)
     {
 
@@ -194,6 +199,8 @@ class UserController
 
         return $response;
     }
+
+
 
     public function registerUserController($id){
         $response = UserModel::registerUserModel($id);

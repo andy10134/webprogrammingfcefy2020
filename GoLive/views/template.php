@@ -100,6 +100,7 @@
 	$router->add('/webprogrammingfcefy2020/Golive/eliminarInstitucion', 'InstitutionController::removeInstitution');
 
 	$router->add('/webprogrammingfcefy2020/Golive/agregarEntrenador', 'InstitutionController::registerTrainner');
+	$router->add('/webprogrammingfcefy2020/Golive/facturacion', 'UserController::facturacion');
 
 	$router->run();
 
